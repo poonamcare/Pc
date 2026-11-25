@@ -1,0 +1,329 @@
+
+/* ==========================================
+   POONAM CARE - ADMIN SYSTEM
+   Owner Dashboard & Management
+   ========================================== */
+
+import {
+  signInWithEmailAndPassword,
+  signOut
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+import {
+  ref,
+  get,
+  update,
+  query,
+  orderByChild,
+  limitToLast
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
+import { auth, database } from "./firebase-config.js";
+
+// ==========================================
+// 1. ADMIN LOGIN
+// ==========================================
+
+// Replace with your verified admin email.
+const ADMIN_EMAIL = "YOUR_ADMIN_EMAIL@example.com";
+
+export async function adminLogin(email, password) {
+  try {
+    if (email.trim().toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+      throw new Error("Access denied.");
+    }
+
+    const result = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    // Verify admin role from protected database record.
+    const adminSnapshot = await get(
+      ref(database, `admins/${result.user.uid}`)
+    );
+
+    if (
+      !adminSnapshot.exists() ||
+      adminSnapshot.val().role !== "owner" ||
+      adminSnapshot.val().active !== true
+    ) {
+      await signOut(auth);
+      throw new Error("You are not an authorized administrator.");
+    }
+
+    return {
+      success: true,
+      message: "Admin login successful."
+    };
+
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
+
+// ==========================================
+// 2. VERIFY ADMIN ACCESS
+// ==========================================
+
+export async function verifyAdmin() {
+  const user = auth.currentUser;
+
+  if (!user) return false;
+
+  const snapshot = await get(
+    ref(database, `admins/${user.uid}`)
+  );
+
+  return (
+    snapshot.exists() &&
+    snapshot.val().role === "owner" &&
+    snapshot.val().active === true
+  );
+}
+
+// ==========================================
+// 3. GET ALL CUSTOMERS
+// ==========================================
+
+export async function getAllCustomers() {
+  try {
+    if (!(await verifyAdmin())) {
+      throw new Error("Unauthorized access.");
+    }
+
+    const snapshot = await get(
+      ref(database, "customers")
+    );
+
+    if (!snapshot.exists()) return [];
+
+    return Object.entries(snapshot.val()).map(
+      ([uid, customer]) => ({
+        uid,
+        ...customer
+      })
+    );
+
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+// ==========================================
+// 4. GET CUSTOMER COUNT
+// ==========================================
+
+export async function getCustomerCount() {
+  const customers = await getAllCustomers();
+  return customers.length;
+}
+
+// ==========================================
+// 5. GET QR SCAN RECORDS
+// ==========================================
+
+export async function getQRScanRecords() {
+  try {
+    if (!(await verifyAdmin())) {
+      throw new Error("Unauthorized access.");
+    }
+
+    const snapshot = await get(
+      ref(database, "qrScans")
+    );
+
+    if (!snapshot.exists()) return [];
+
+    return Object.entries(snapshot.val())
+      .map(([id, record]) => ({
+        id,
+        ...record
+      }))
+      .sort((a, b) => (b.scannedAt || 0) - (a.scannedAt || 0));
+
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+// ==========================================
+// 6. GET EMERGENCY ALERTS
+// ==========================================
+
+export async function getEmergencyAlerts() {
+  try {
+    if (!(await verifyAdmin())) {
+      throw new Error("Unauthorized access.");
+    }
+
+    const snapshot = await get(
+      ref(database, "emergencyAlerts")
+    );
+
+    if (!snapshot.exists()) return [];
+
+    return Object.entries(snapshot.val())
+      .map(([id, alert]) => ({
+        id,
+        ...alert
+      }))
+      .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+// ==========================================
+// 7. UPDATE EMERGENCY STATUS
+// ==========================================
+
+export async function updateEmergencyStatus(alertId, status) {
+  try {
+    if (!(await verifyAdmin())) {
+      throw new Error("Unauthorized access.");
+    }
+
+    const allowedStatuses = [
+      "pending",
+      "acknowledged",
+      "resolved"
+    ];
+
+    if (!allowedStatuses.includes(status)) {
+      throw new Error("Invalid alert status.");
+    }
+
+    await update(
+      ref(database, `emergencyAlerts/${alertId}`),
+      {
+        status,
+        updatedAt: Date.now()
+      }
+    );
+
+    return {
+      success: true,
+      message: "Emergency status updated."
+    };
+
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
+
+// ==========================================
+// 8. UPDATE CUSTOMER ACCOUNT STATUS
+// ==========================================
+
+export async function updateCustomerStatus(uid, status) {
+  try {
+    if (!(await verifyAdmin())) {
+      throw new Error("Unauthorized access.");
+    }
+
+    if (!["active", "suspended"].includes(status)) {
+      throw new Error("Invalid account status.");
+    }
+
+    await update(
+      ref(database, `customers/${uid}`),
+      {
+        accountStatus: status,
+        updatedAt: Date.now()
+      }
+    );
+
+    return {
+      success: true,
+      message: "Customer status updated."
+    };
+
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
+
+// ==========================================
+// 9. ADMIN DASHBOARD SUMMARY
+// ==========================================
+
+export async function getAdminDashboard() {
+  try {
+    if (!(await verifyAdmin())) {
+      throw new Error("Unauthorized access.");
+    }
+
+    const [customers, alerts, scans] = await Promise.all([
+      get(ref(database, "customers")),
+      get(ref(database, "emergencyAlerts")),
+      get(ref(database, "qrScans"))
+    ]);
+
+    const customerData = customers.exists()
+      ? Object.values(customers.val())
+      : [];
+
+    const alertData = alerts.exists()
+      ? Object.values(alerts.val())
+      : [];
+
+    const scanData = scans.exists()
+      ? Object.values(scans.val())
+      : [];
+
+    return {
+      totalCustomers: customerData.length,
+      activeCustomers: customerData.filter(
+        c => c.accountStatus === "active"
+      ).length,
+      suspendedCustomers: customerData.filter(
+        c => c.accountStatus === "suspended"
+      ).length,
+      totalQRScans: scanData.length,
+      totalEmergencyAlerts: alertData.length,
+      pendingAlerts: alertData.filter(
+        a => a.status === "pending"
+      ).length
+    };
+
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+// ==========================================
+// 10. ADMIN LOGOUT
+// ==========================================
+
+export async function adminLogout() {
+  try {
+    await signOut(auth);
+
+    return {
+      success: true,
+      message: "Admin logged out successfully."
+    };
+
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
