@@ -1,0 +1,2173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#4B1A86">
+<title>Poonam Care</title>
+<link rel="icon" href="logo.webp">
+<style>
+:root{--bg:#F5EFFB;--card:#fff;--ink:#25103F;--muted:#6F6288;--p1:#7A2BD1;--p2:#4B1A86;--p3:#2E0F55;--pink:#FF2E88;--gold:#E9B949;--red:#E3122F;--red2:#9E0A20;--green:#0F9D58;--line:#E6DCF3}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:radial-gradient(1200px 500px at 50% -120px,#E4D2FA 0,var(--bg) 60%) fixed;color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI','Noto Sans','Noto Sans Devanagari',Roboto,sans-serif;font-size:16px;line-height:1.45;min-height:100vh;overflow-x:hidden}
+img{max-width:100%}
+h1{font-size:24px;margin:.4em 0 .2em}h2{font-size:18px;margin:0 0 10px}h3{margin:0 0 4px}
+.muted{color:var(--muted)}.s{font-size:13px}.center{text-align:center}
+.wrap{max-width:520px;margin:0 auto;padding:14px 14px 150px}
+.wrap.center{padding-top:48px}
+.logo-sm{width:96px;height:96px;object-fit:contain;border-radius:20px}
+.logo-lg{width:200px;height:200px;object-fit:contain;border-radius:28px;box-shadow:0 14px 40px rgba(75,26,134,.25)}
+.foot{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+/* header + 3D hero */
+.top{display:flex;align-items:center;gap:12px;padding:6px 2px 12px}
+.top .tl{width:64px;height:64px;border-radius:16px;background:#fff;box-shadow:0 4px 0 #D8C6EE,0 10px 22px rgba(75,26,134,.2);flex:none;object-fit:contain;transform:perspective(500px) rotateY(var(--ry,-8deg)) rotateX(var(--rx,6deg));transition:transform .2s;animation:float 4s ease-in-out infinite}
+.top b{display:block;font-size:20px;color:var(--p2);letter-spacing:.2px}.top span{font-size:12px;color:var(--muted)}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -4px}}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;background:#EFE6FA;color:var(--p2)}
+.pill.on{background:#DDF6E8;color:#0A6B3A}.pill.off{background:#F1ECF6;color:#6F6288}.pill.warn{background:#FFF0CC;color:#7A5300}.pill.bad{background:#FFE0E5;color:#9E0A20}
+.pill i{width:9px;height:9px;border-radius:50%;background:currentColor;display:inline-block}
+.pill.on i{animation:blink 1.2s infinite}@keyframes blink{50%{opacity:.25}}
+/* cards */
+.card{background:var(--card);border-radius:20px;padding:14px;margin:0 0 14px;box-shadow:0 2px 0 #E8DDF5,0 14px 30px rgba(75,26,134,.10)}
+.card.glass{background:linear-gradient(135deg,#fff,#F6EDFF)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.person{background:linear-gradient(180deg,#fff,#F8F2FE);border:1px solid var(--line);border-radius:16px;padding:10px;transform:perspective(600px) rotateX(2deg);box-shadow:0 5px 0 #E3D6F2,0 10px 16px rgba(75,26,134,.10)}
+.person .nm{font-weight:800;color:var(--p2);margin-bottom:8px;display:flex;align-items:center;gap:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.person .nm em{font-style:normal;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--p1),var(--pink));color:#fff;display:inline-grid;place-items:center;font-size:13px;flex:none}
+.person .row{display:flex;gap:6px}
+.nocopy,.nocopy *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.help{display:flex;flex-wrap:wrap;gap:8px}
+/* 3D buttons */
+button{font:inherit;cursor:pointer}
+.b3{border:0;color:#fff;font-weight:800;border-radius:14px;padding:12px 14px;background:linear-gradient(180deg,var(--p1),var(--p2));box-shadow:0 5px 0 var(--p3),0 10px 18px rgba(75,26,134,.35);transform:translateY(0);transition:transform .07s,box-shadow .07s;min-height:44px;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.b3:active{transform:translateY(4px);box-shadow:0 1px 0 var(--p3),0 3px 6px rgba(75,26,134,.35)}
+.b3.sm{padding:8px 10px;font-size:14px;min-height:38px;flex:1;border-radius:12px;box-shadow:0 4px 0 var(--p3),0 8px 12px rgba(75,26,134,.25)}
+.b3.green{background:linear-gradient(180deg,#19B96B,#0B7F46);box-shadow:0 5px 0 #075A31,0 10px 18px rgba(11,127,70,.35)}
+.b3.pink{background:linear-gradient(180deg,#FF5BA6,#D81B72);box-shadow:0 5px 0 #96114F,0 10px 18px rgba(216,27,114,.35)}
+.b3.red{background:linear-gradient(180deg,#FF4560,var(--red));box-shadow:0 5px 0 var(--red2),0 10px 18px rgba(227,18,47,.4)}
+.b3.gold{background:linear-gradient(180deg,#F6CF6B,#C9962B);color:#3b2a00;box-shadow:0 5px 0 #8E6A12,0 10px 18px rgba(201,150,43,.35)}
+.b3.light{background:#fff;color:var(--p2);box-shadow:0 4px 0 #D8C6EE,0 8px 14px rgba(75,26,134,.12)}
+.b3.big{width:100%;font-size:19px;padding:16px;border-radius:18px}
+.b3[disabled]{opacity:.5;pointer-events:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:#fff;border-radius:14px;padding:8px 12px;font-weight:700;color:var(--p2);min-width:62px;text-align:center}
+.chip small{display:block;font-size:11px;font-weight:600;color:var(--muted)}
+.chip.sel{border-color:var(--p1);background:#F0E4FF;box-shadow:0 3px 0 #CDB3EE}
+.chip span{font-size:24px;display:block;line-height:1.1}
+/* RED ALERT bar */
+.sos{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(245,239,251,0),var(--bg) 40%)}
+.sos .in{max-width:520px;margin:0 auto}
+.hold{position:relative;width:100%;border:0;border-radius:20px;padding:0;color:#fff;overflow:hidden;background:linear-gradient(180deg,#FF4560,var(--red) 55%,#B30D25);box-shadow:0 7px 0 var(--red2),0 16px 28px rgba(227,18,47,.5);touch-action:none;-webkit-user-select:none;user-select:none;transition:transform .08s,box-shadow .08s}
+.hold.down{transform:translateY(5px);box-shadow:0 2px 0 var(--red2),0 6px 12px rgba(227,18,47,.5)}
+.hold .fill{position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(255,255,255,.35)}
+.hold .t{position:relative;display:block;padding:15px 10px;font-weight:900;font-size:20px;letter-spacing:.5px}
+.hold .t small{display:block;font-size:12px;font-weight:700;opacity:.9;letter-spacing:0}
+/* alert screen */
+.alertbox{position:fixed;inset:0;z-index:60;overflow:auto;background:linear-gradient(180deg,#B30D25,#6E0615);color:#fff;padding:18px 14px 30px;animation:flash 1s infinite}
+@keyframes flash{50%{background:linear-gradient(180deg,#E3122F,#8B0A1E)}}
+.alertbox .in{max-width:520px;margin:0 auto}
+.alertbox h1{font-size:30px;text-align:center;margin:6px 0}
+.alertbox .box{background:rgba(255,255,255,.14);border-radius:16px;padding:12px;margin:12px 0}
+.alertbox .person{background:#fff;color:var(--ink);transform:none}
+.alertbox .st{font-size:14px}.alertbox .st div{margin:3px 0}
+.ok{color:#9CFFC8}.no{color:#FFD0D6}
+/* modal + PIN */
+.modal{position:fixed;inset:0;z-index:80;background:rgba(37,16,63,.55);display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:#fff;width:100%;max-width:520px;border-radius:26px 26px 0 0;padding:20px 18px calc(18px + env(safe-area-inset-bottom));max-height:92vh;overflow:auto;animation:up .18s ease-out}
+@keyframes up{from{transform:translateY(40px);opacity:.4}}
+.sheet.shake{animation:shake .35s}@keyframes shake{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+.pin{text-align:center}.dots{display:flex;gap:14px;justify-content:center;margin:12px 0 4px}
+.dots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--p1);display:block}.dots i.on{background:var(--p1)}
+.err{color:var(--red);min-height:22px;margin:4px 0;font-weight:700;font-size:14px}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:300px;margin:0 auto}
+.pad button{border:0;border-radius:16px;background:#F3EAFC;color:var(--p2);font-size:24px;font-weight:800;padding:14px 0;box-shadow:0 3px 0 #D8C6EE;transition:transform .05s}
+.pad button:active{transform:translateY(3px);box-shadow:none}.pad .ghost{background:transparent;box-shadow:none;font-size:15px;color:var(--muted)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+#toast{position:fixed;left:50%;bottom:110px;transform:translate(-50%,20px);background:#25103F;color:#fff;padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:99;max-width:90%;text-align:center;font-size:14px}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+ul.cons{padding-left:20px;margin:10px 0}ul.cons li{margin:6px 0}
+label.chk{display:flex;gap:10px;align-items:flex-start;margin:12px 0;font-weight:600}label.chk input{width:22px;height:22px;flex:none;margin-top:2px}
+/* parent view: 3D map */
+.map{position:relative;height:340px;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,#cfd9e6,#e9eef5);perspective:850px;box-shadow:0 2px 0 #E8DDF5,0 14px 30px rgba(75,26,134,.18);margin-bottom:12px}
+.plane{position:absolute;left:50%;top:50%;width:1280px;height:1280px;margin:-640px 0 0 -640px;transform-style:preserve-3d;transform:rotateX(var(--tilt,50deg));transform-origin:50% 56%;transition:transform .5s}
+.plane img{position:absolute;width:256px;height:256px;image-rendering:auto}
+.plane svg{position:absolute;left:0;top:0;width:1280px;height:1280px;overflow:visible}
+.me{position:absolute;left:640px;top:640px;transform-style:preserve-3d}
+.me .ring{position:absolute;left:-26px;top:-26px;width:52px;height:52px;border-radius:50%;background:rgba(255,46,136,.28);border:2px solid var(--pink);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.7);opacity:0}}
+.me .pinx{position:absolute;left:0;top:0;transform-origin:50% 100%;transform:translate(-50%,-100%) rotateX(calc(var(--tilt,50deg) * -1));font-size:34px;filter:drop-shadow(0 6px 4px rgba(0,0,0,.35));white-space:nowrap}
+.me .pinx b{display:block;font-size:11px;background:#fff;color:var(--p2);border-radius:8px;padding:1px 7px;margin-top:-4px;text-align:center}
+.mapbtn{position:absolute;right:8px;z-index:3;width:42px;height:42px;border:0;border-radius:12px;background:#fff;color:var(--p2);font-weight:900;font-size:20px;box-shadow:0 3px 0 #D8C6EE,0 6px 12px rgba(0,0,0,.2)}
+.attr{position:absolute;left:6px;bottom:4px;font-size:10px;background:rgba(255,255,255,.8);padding:1px 5px;border-radius:6px;z-index:3}
+.nomap{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px;z-index:2}
+.tl{list-style:none;padding:0;margin:0}.tl li{display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}.tl li:last-child{border:0}
+.tl .ic{width:34px;height:34px;border-radius:50%;background:#F0E4FF;display:grid;place-items:center;flex:none}
+.tl .tm{margin-left:auto;color:var(--muted);font-size:13px;white-space:nowrap}
+/* admin */
+.wrap.adm{max-width:980px}
+.adm input,.adm select,.adm textarea{width:100%;font:inherit;padding:10px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.adm textarea{min-height:110px}.adm label{display:block;font-weight:700;font-size:13px;margin:10px 0 4px;color:var(--p2)}
+.cr{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0;padding:8px;border:1px dashed var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font-size:12px;color:var(--muted)}.tw{overflow-x:auto}
+.qrs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.qrs canvas{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.banner{background:#FFF0CC;color:#6a4700;border-radius:14px;padding:10px 12px;font-size:14px;margin-bottom:12px}
+.warnbox{background:#FFE9EC;color:#8A0A1D;border-radius:14px;padding:10px 12px;font-size:14px;margin:10px 0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.alertbox .grid2.nocopy{grid-template-columns:1fr}
+.person .row{flex-wrap:wrap}
+.alertbox .person .row .b3.sm{min-width:84px}
+
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* QR encoder: Kazuhiko Arase (MIT license), bundled for offline use */
+var PCQR=(function(){var defs={},cache={};function req(n){n=n.replace('./','');if(n==='')n='index';if(cache[n])return cache[n].exports;var m={exports:{}};cache[n]=m;defs[n](m,m.exports,req);return m.exports;}
+defs['QR8bitByte']=function(module,exports,require){
+var QRMode = require('./QRMode');
+
+function QR8bitByte(data) {
+	this.mode = QRMode.MODE_8BIT_BYTE;
+	this.data = data;
+}
+
+QR8bitByte.prototype = {
+
+	getLength : function() {
+		return this.data.length;
+	},
+	
+	write : function(buffer) {
+		for (var i = 0; i < this.data.length; i++) {
+			// not JIS ...
+			buffer.put(this.data.charCodeAt(i), 8);
+		}
+	}
+};
+
+module.exports = QR8bitByte;
+
+};
+defs['QRBitBuffer']=function(module,exports,require){
+function QRBitBuffer() {
+	this.buffer = [];
+	this.length = 0;
+}
+
+QRBitBuffer.prototype = {
+
+	get : function(index) {
+		var bufIndex = Math.floor(index / 8);
+		return ( (this.buffer[bufIndex] >>> (7 - index % 8) ) & 1) == 1;
+	},
+	
+	put : function(num, length) {
+		for (var i = 0; i < length; i++) {
+			this.putBit( ( (num >>> (length - i - 1) ) & 1) == 1);
+		}
+	},
+	
+	getLengthInBits : function() {
+		return this.length;
+	},
+	
+	putBit : function(bit) {
+	
+		var bufIndex = Math.floor(this.length / 8);
+		if (this.buffer.length <= bufIndex) {
+			this.buffer.push(0);
+		}
+	
+		if (bit) {
+			this.buffer[bufIndex] |= (0x80 >>> (this.length % 8) );
+		}
+	
+		this.length++;
+	}
+};
+
+module.exports = QRBitBuffer;
+
+};
+defs['QRErrorCorrectLevel']=function(module,exports,require){
+module.exports = {
+	L : 1,
+	M : 0,
+	Q : 3,
+	H : 2
+};
+
+
+};
+defs['QRMaskPattern']=function(module,exports,require){
+module.exports = {
+	PATTERN000 : 0,
+	PATTERN001 : 1,
+	PATTERN010 : 2,
+	PATTERN011 : 3,
+	PATTERN100 : 4,
+	PATTERN101 : 5,
+	PATTERN110 : 6,
+	PATTERN111 : 7
+};
+
+};
+defs['QRMath']=function(module,exports,require){
+var QRMath = {
+
+	glog : function(n) {
+	
+		if (n < 1) {
+			throw new Error("glog(" + n + ")");
+		}
+		
+		return QRMath.LOG_TABLE[n];
+	},
+	
+	gexp : function(n) {
+	
+		while (n < 0) {
+			n += 255;
+		}
+	
+		while (n >= 256) {
+			n -= 255;
+		}
+	
+		return QRMath.EXP_TABLE[n];
+	},
+	
+	EXP_TABLE : new Array(256),
+	
+	LOG_TABLE : new Array(256)
+
+};
+	
+for (var i = 0; i < 8; i++) {
+	QRMath.EXP_TABLE[i] = 1 << i;
+}
+for (var i = 8; i < 256; i++) {
+	QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4]
+		^ QRMath.EXP_TABLE[i - 5]
+		^ QRMath.EXP_TABLE[i - 6]
+		^ QRMath.EXP_TABLE[i - 8];
+}
+for (var i = 0; i < 255; i++) {
+	QRMath.LOG_TABLE[QRMath.EXP_TABLE[i] ] = i;
+}
+
+module.exports = QRMath;
+
+};
+defs['QRMode']=function(module,exports,require){
+module.exports = {
+    MODE_NUMBER :       1 << 0,
+    MODE_ALPHA_NUM :    1 << 1,
+    MODE_8BIT_BYTE :    1 << 2,
+    MODE_KANJI :        1 << 3
+};
+
+};
+defs['QRPolynomial']=function(module,exports,require){
+var QRMath = require('./QRMath');
+
+function QRPolynomial(num, shift) {
+	if (num.length === undefined) {
+		throw new Error(num.length + "/" + shift);
+	}
+
+	var offset = 0;
+
+	while (offset < num.length && num[offset] === 0) {
+		offset++;
+	}
+
+	this.num = new Array(num.length - offset + shift);
+	for (var i = 0; i < num.length - offset; i++) {
+		this.num[i] = num[i + offset];
+	}
+}
+
+QRPolynomial.prototype = {
+
+	get : function(index) {
+		return this.num[index];
+	},
+	
+	getLength : function() {
+		return this.num.length;
+	},
+	
+	multiply : function(e) {
+	
+		var num = new Array(this.getLength() + e.getLength() - 1);
+	
+		for (var i = 0; i < this.getLength(); i++) {
+			for (var j = 0; j < e.getLength(); j++) {
+				num[i + j] ^= QRMath.gexp(QRMath.glog(this.get(i) ) + QRMath.glog(e.get(j) ) );
+			}
+		}
+	
+		return new QRPolynomial(num, 0);
+	},
+	
+	mod : function(e) {
+	
+		if (this.getLength() - e.getLength() < 0) {
+			return this;
+		}
+	
+		var ratio = QRMath.glog(this.get(0) ) - QRMath.glog(e.get(0) );
+	
+		var num = new Array(this.getLength() );
+		
+		for (var i = 0; i < this.getLength(); i++) {
+			num[i] = this.get(i);
+		}
+		
+		for (var x = 0; x < e.getLength(); x++) {
+			num[x] ^= QRMath.gexp(QRMath.glog(e.get(x) ) + ratio);
+		}
+	
+		// recursive call
+		return new QRPolynomial(num, 0).mod(e);
+	}
+};
+
+module.exports = QRPolynomial;
+
+};
+defs['QRRSBlock']=function(module,exports,require){
+var QRErrorCorrectLevel = require('./QRErrorCorrectLevel');
+
+function QRRSBlock(totalCount, dataCount) {
+	this.totalCount = totalCount;
+	this.dataCount  = dataCount;
+}
+
+QRRSBlock.RS_BLOCK_TABLE = [
+
+	// L
+	// M
+	// Q
+	// H
+
+	// 1
+	[1, 26, 19],
+	[1, 26, 16],
+	[1, 26, 13],
+	[1, 26, 9],
+	
+	// 2
+	[1, 44, 34],
+	[1, 44, 28],
+	[1, 44, 22],
+	[1, 44, 16],
+
+	// 3
+	[1, 70, 55],
+	[1, 70, 44],
+	[2, 35, 17],
+	[2, 35, 13],
+
+	// 4		
+	[1, 100, 80],
+	[2, 50, 32],
+	[2, 50, 24],
+	[4, 25, 9],
+	
+	// 5
+	[1, 134, 108],
+	[2, 67, 43],
+	[2, 33, 15, 2, 34, 16],
+	[2, 33, 11, 2, 34, 12],
+	
+	// 6
+	[2, 86, 68],
+	[4, 43, 27],
+	[4, 43, 19],
+	[4, 43, 15],
+	
+	// 7		
+	[2, 98, 78],
+	[4, 49, 31],
+	[2, 32, 14, 4, 33, 15],
+	[4, 39, 13, 1, 40, 14],
+	
+	// 8
+	[2, 121, 97],
+	[2, 60, 38, 2, 61, 39],
+	[4, 40, 18, 2, 41, 19],
+	[4, 40, 14, 2, 41, 15],
+	
+	// 9
+	[2, 146, 116],
+	[3, 58, 36, 2, 59, 37],
+	[4, 36, 16, 4, 37, 17],
+	[4, 36, 12, 4, 37, 13],
+	
+	// 10		
+	[2, 86, 68, 2, 87, 69],
+	[4, 69, 43, 1, 70, 44],
+	[6, 43, 19, 2, 44, 20],
+	[6, 43, 15, 2, 44, 16],
+
+	// 11
+	[4, 101, 81],
+	[1, 80, 50, 4, 81, 51],
+	[4, 50, 22, 4, 51, 23],
+	[3, 36, 12, 8, 37, 13],
+
+	// 12
+	[2, 116, 92, 2, 117, 93],
+	[6, 58, 36, 2, 59, 37],
+	[4, 46, 20, 6, 47, 21],
+	[7, 42, 14, 4, 43, 15],
+
+	// 13
+	[4, 133, 107],
+	[8, 59, 37, 1, 60, 38],
+	[8, 44, 20, 4, 45, 21],
+	[12, 33, 11, 4, 34, 12],
+
+	// 14
+	[3, 145, 115, 1, 146, 116],
+	[4, 64, 40, 5, 65, 41],
+	[11, 36, 16, 5, 37, 17],
+	[11, 36, 12, 5, 37, 13],
+
+	// 15
+	[5, 109, 87, 1, 110, 88],
+	[5, 65, 41, 5, 66, 42],
+	[5, 54, 24, 7, 55, 25],
+	[11, 36, 12],
+
+	// 16
+	[5, 122, 98, 1, 123, 99],
+	[7, 73, 45, 3, 74, 46],
+	[15, 43, 19, 2, 44, 20],
+	[3, 45, 15, 13, 46, 16],
+
+	// 17
+	[1, 135, 107, 5, 136, 108],
+	[10, 74, 46, 1, 75, 47],
+	[1, 50, 22, 15, 51, 23],
+	[2, 42, 14, 17, 43, 15],
+
+	// 18
+	[5, 150, 120, 1, 151, 121],
+	[9, 69, 43, 4, 70, 44],
+	[17, 50, 22, 1, 51, 23],
+	[2, 42, 14, 19, 43, 15],
+
+	// 19
+	[3, 141, 113, 4, 142, 114],
+	[3, 70, 44, 11, 71, 45],
+	[17, 47, 21, 4, 48, 22],
+	[9, 39, 13, 16, 40, 14],
+
+	// 20
+	[3, 135, 107, 5, 136, 108],
+	[3, 67, 41, 13, 68, 42],
+	[15, 54, 24, 5, 55, 25],
+	[15, 43, 15, 10, 44, 16],
+
+	// 21
+	[4, 144, 116, 4, 145, 117],
+	[17, 68, 42],
+	[17, 50, 22, 6, 51, 23],
+	[19, 46, 16, 6, 47, 17],
+
+	// 22
+	[2, 139, 111, 7, 140, 112],
+	[17, 74, 46],
+	[7, 54, 24, 16, 55, 25],
+	[34, 37, 13],
+
+	// 23
+	[4, 151, 121, 5, 152, 122],
+	[4, 75, 47, 14, 76, 48],
+	[11, 54, 24, 14, 55, 25],
+	[16, 45, 15, 14, 46, 16],
+
+	// 24
+	[6, 147, 117, 4, 148, 118],
+	[6, 73, 45, 14, 74, 46],
+	[11, 54, 24, 16, 55, 25],
+	[30, 46, 16, 2, 47, 17],
+
+	// 25
+	[8, 132, 106, 4, 133, 107],
+	[8, 75, 47, 13, 76, 48],
+	[7, 54, 24, 22, 55, 25],
+	[22, 45, 15, 13, 46, 16],
+
+	// 26
+	[10, 142, 114, 2, 143, 115],
+	[19, 74, 46, 4, 75, 47],
+	[28, 50, 22, 6, 51, 23],
+	[33, 46, 16, 4, 47, 17],
+
+	// 27
+	[8, 152, 122, 4, 153, 123],
+	[22, 73, 45, 3, 74, 46],
+	[8, 53, 23, 26, 54, 24],
+	[12, 45, 15, 28, 46, 16],
+
+	// 28
+	[3, 147, 117, 10, 148, 118],
+	[3, 73, 45, 23, 74, 46],
+	[4, 54, 24, 31, 55, 25],
+	[11, 45, 15, 31, 46, 16],
+
+	// 29
+	[7, 146, 116, 7, 147, 117],
+	[21, 73, 45, 7, 74, 46],
+	[1, 53, 23, 37, 54, 24],
+	[19, 45, 15, 26, 46, 16],
+
+	// 30
+	[5, 145, 115, 10, 146, 116],
+	[19, 75, 47, 10, 76, 48],
+	[15, 54, 24, 25, 55, 25],
+	[23, 45, 15, 25, 46, 16],
+
+	// 31
+	[13, 145, 115, 3, 146, 116],
+	[2, 74, 46, 29, 75, 47],
+	[42, 54, 24, 1, 55, 25],
+	[23, 45, 15, 28, 46, 16],
+
+	// 32
+	[17, 145, 115],
+	[10, 74, 46, 23, 75, 47],
+	[10, 54, 24, 35, 55, 25],
+	[19, 45, 15, 35, 46, 16],
+
+	// 33
+	[17, 145, 115, 1, 146, 116],
+	[14, 74, 46, 21, 75, 47],
+	[29, 54, 24, 19, 55, 25],
+	[11, 45, 15, 46, 46, 16],
+
+	// 34
+	[13, 145, 115, 6, 146, 116],
+	[14, 74, 46, 23, 75, 47],
+	[44, 54, 24, 7, 55, 25],
+	[59, 46, 16, 1, 47, 17],
+
+	// 35
+	[12, 151, 121, 7, 152, 122],
+	[12, 75, 47, 26, 76, 48],
+	[39, 54, 24, 14, 55, 25],
+	[22, 45, 15, 41, 46, 16],
+
+	// 36
+	[6, 151, 121, 14, 152, 122],
+	[6, 75, 47, 34, 76, 48],
+	[46, 54, 24, 10, 55, 25],
+	[2, 45, 15, 64, 46, 16],
+
+	// 37
+	[17, 152, 122, 4, 153, 123],
+	[29, 74, 46, 14, 75, 47],
+	[49, 54, 24, 10, 55, 25],
+	[24, 45, 15, 46, 46, 16],
+
+	// 38
+	[4, 152, 122, 18, 153, 123],
+	[13, 74, 46, 32, 75, 47],
+	[48, 54, 24, 14, 55, 25],
+	[42, 45, 15, 32, 46, 16],
+
+	// 39
+	[20, 147, 117, 4, 148, 118],
+	[40, 75, 47, 7, 76, 48],
+	[43, 54, 24, 22, 55, 25],
+	[10, 45, 15, 67, 46, 16],
+
+	// 40
+	[19, 148, 118, 6, 149, 119],
+	[18, 75, 47, 31, 76, 48],
+	[34, 54, 24, 34, 55, 25],
+	[20, 45, 15, 61, 46, 16]
+];
+
+QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
+	
+	var rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
+	
+	if (rsBlock === undefined) {
+		throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + errorCorrectLevel);
+	}
+
+	var length = rsBlock.length / 3;
+	
+	var list = [];
+	
+	for (var i = 0; i < length; i++) {
+
+		var count = rsBlock[i * 3 + 0];
+		var totalCount = rsBlock[i * 3 + 1];
+		var dataCount  = rsBlock[i * 3 + 2];
+
+		for (var j = 0; j < count; j++) {
+			list.push(new QRRSBlock(totalCount, dataCount) );	
+		}
+	}
+	
+	return list;
+};
+
+QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
+
+	switch(errorCorrectLevel) {
+	case QRErrorCorrectLevel.L :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+	case QRErrorCorrectLevel.M :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+	case QRErrorCorrectLevel.Q :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+	case QRErrorCorrectLevel.H :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+	default :
+		return undefined;
+	}
+};
+
+module.exports = QRRSBlock;
+
+};
+defs['QRUtil']=function(module,exports,require){
+var QRMode = require('./QRMode');
+var QRPolynomial = require('./QRPolynomial');
+var QRMath = require('./QRMath');
+var QRMaskPattern = require('./QRMaskPattern');
+
+var QRUtil = {
+
+    PATTERN_POSITION_TABLE : [
+        [],
+        [6, 18],
+        [6, 22],
+        [6, 26],
+        [6, 30],
+        [6, 34],
+        [6, 22, 38],
+        [6, 24, 42],
+        [6, 26, 46],
+        [6, 28, 50],
+        [6, 30, 54],        
+        [6, 32, 58],
+        [6, 34, 62],
+        [6, 26, 46, 66],
+        [6, 26, 48, 70],
+        [6, 26, 50, 74],
+        [6, 30, 54, 78],
+        [6, 30, 56, 82],
+        [6, 30, 58, 86],
+        [6, 34, 62, 90],
+        [6, 28, 50, 72, 94],
+        [6, 26, 50, 74, 98],
+        [6, 30, 54, 78, 102],
+        [6, 28, 54, 80, 106],
+        [6, 32, 58, 84, 110],
+        [6, 30, 58, 86, 114],
+        [6, 34, 62, 90, 118],
+        [6, 26, 50, 74, 98, 122],
+        [6, 30, 54, 78, 102, 126],
+        [6, 26, 52, 78, 104, 130],
+        [6, 30, 56, 82, 108, 134],
+        [6, 34, 60, 86, 112, 138],
+        [6, 30, 58, 86, 114, 142],
+        [6, 34, 62, 90, 118, 146],
+        [6, 30, 54, 78, 102, 126, 150],
+        [6, 24, 50, 76, 102, 128, 154],
+        [6, 28, 54, 80, 106, 132, 158],
+        [6, 32, 58, 84, 110, 136, 162],
+        [6, 26, 54, 82, 110, 138, 166],
+        [6, 30, 58, 86, 114, 142, 170]
+    ],
+
+    G15 : (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0),
+    G18 : (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0),
+    G15_MASK : (1 << 14) | (1 << 12) | (1 << 10)    | (1 << 4) | (1 << 1),
+
+    getBCHTypeInfo : function(data) {
+        var d = data << 10;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) >= 0) {
+            d ^= (QRUtil.G15 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) ) );    
+        }
+        return ( (data << 10) | d) ^ QRUtil.G15_MASK;
+    },
+
+    getBCHTypeNumber : function(data) {
+        var d = data << 12;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) >= 0) {
+            d ^= (QRUtil.G18 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) ) );    
+        }
+        return (data << 12) | d;
+    },
+
+    getBCHDigit : function(data) {
+
+        var digit = 0;
+
+        while (data !== 0) {
+            digit++;
+            data >>>= 1;
+        }
+
+        return digit;
+    },
+
+    getPatternPosition : function(typeNumber) {
+        return QRUtil.PATTERN_POSITION_TABLE[typeNumber - 1];
+    },
+
+    getMask : function(maskPattern, i, j) {
+        
+        switch (maskPattern) {
+            
+        case QRMaskPattern.PATTERN000 : return (i + j) % 2 === 0;
+        case QRMaskPattern.PATTERN001 : return i % 2 === 0;
+        case QRMaskPattern.PATTERN010 : return j % 3 === 0;
+        case QRMaskPattern.PATTERN011 : return (i + j) % 3 === 0;
+        case QRMaskPattern.PATTERN100 : return (Math.floor(i / 2) + Math.floor(j / 3) ) % 2 === 0;
+        case QRMaskPattern.PATTERN101 : return (i * j) % 2 + (i * j) % 3 === 0;
+        case QRMaskPattern.PATTERN110 : return ( (i * j) % 2 + (i * j) % 3) % 2 === 0;
+        case QRMaskPattern.PATTERN111 : return ( (i * j) % 3 + (i + j) % 2) % 2 === 0;
+
+        default :
+            throw new Error("bad maskPattern:" + maskPattern);
+        }
+    },
+
+    getErrorCorrectPolynomial : function(errorCorrectLength) {
+
+        var a = new QRPolynomial([1], 0);
+
+        for (var i = 0; i < errorCorrectLength; i++) {
+            a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0) );
+        }
+
+        return a;
+    },
+
+    getLengthInBits : function(mode, type) {
+
+        if (1 <= type && type < 10) {
+
+            // 1 - 9
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 10;
+            case QRMode.MODE_ALPHA_NUM  : return 9;
+            case QRMode.MODE_8BIT_BYTE  : return 8;
+            case QRMode.MODE_KANJI      : return 8;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 27) {
+
+            // 10 - 26
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 12;
+            case QRMode.MODE_ALPHA_NUM  : return 11;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 10;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 41) {
+
+            // 27 - 40
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 14;
+            case QRMode.MODE_ALPHA_NUM  : return 13;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 12;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else {
+            throw new Error("type:" + type);
+        }
+    },
+
+    getLostPoint : function(qrCode) {
+        
+        var moduleCount = qrCode.getModuleCount();
+        var lostPoint = 0;
+        var row = 0; 
+        var col = 0;
+
+        
+        // LEVEL1
+        
+        for (row = 0; row < moduleCount; row++) {
+
+            for (col = 0; col < moduleCount; col++) {
+
+                var sameCount = 0;
+                var dark = qrCode.isDark(row, col);
+
+                for (var r = -1; r <= 1; r++) {
+
+                    if (row + r < 0 || moduleCount <= row + r) {
+                        continue;
+                    }
+
+                    for (var c = -1; c <= 1; c++) {
+
+                        if (col + c < 0 || moduleCount <= col + c) {
+                            continue;
+                        }
+
+                        if (r === 0 && c === 0) {
+                            continue;
+                        }
+
+                        if (dark === qrCode.isDark(row + r, col + c) ) {
+                            sameCount++;
+                        }
+                    }
+                }
+
+                if (sameCount > 5) {
+                    lostPoint += (3 + sameCount - 5);
+                }
+            }
+        }
+
+        // LEVEL2
+
+        for (row = 0; row < moduleCount - 1; row++) {
+            for (col = 0; col < moduleCount - 1; col++) {
+                var count = 0;
+                if (qrCode.isDark(row,     col    ) ) count++;
+                if (qrCode.isDark(row + 1, col    ) ) count++;
+                if (qrCode.isDark(row,     col + 1) ) count++;
+                if (qrCode.isDark(row + 1, col + 1) ) count++;
+                if (count === 0 || count === 4) {
+                    lostPoint += 3;
+                }
+            }
+        }
+
+        // LEVEL3
+
+        for (row = 0; row < moduleCount; row++) {
+            for (col = 0; col < moduleCount - 6; col++) {
+                if (qrCode.isDark(row, col) && 
+                        !qrCode.isDark(row, col + 1) && 
+                         qrCode.isDark(row, col + 2) && 
+                         qrCode.isDark(row, col + 3) && 
+                         qrCode.isDark(row, col + 4) && 
+                        !qrCode.isDark(row, col + 5) && 
+                         qrCode.isDark(row, col + 6) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount - 6; row++) {
+                if (qrCode.isDark(row, col) &&
+                        !qrCode.isDark(row + 1, col) &&
+                         qrCode.isDark(row + 2, col) &&
+                         qrCode.isDark(row + 3, col) &&
+                         qrCode.isDark(row + 4, col) &&
+                        !qrCode.isDark(row + 5, col) &&
+                         qrCode.isDark(row + 6, col) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        // LEVEL4
+        
+        var darkCount = 0;
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount; row++) {
+                if (qrCode.isDark(row, col) ) {
+                    darkCount++;
+                }
+            }
+        }
+        
+        var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+        lostPoint += ratio * 10;
+
+        return lostPoint;       
+    }
+
+};
+
+module.exports = QRUtil;
+
+};
+defs['index']=function(module,exports,require){
+//---------------------------------------------------------------------
+// QRCode for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//   http://www.opensource.org/licenses/mit-license.php
+//
+// The word "QR Code" is registered trademark of 
+// DENSO WAVE INCORPORATED
+//   http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+// Modified to work in node for this project (and some refactoring)
+//---------------------------------------------------------------------
+
+var QR8bitByte = require('./QR8bitByte');
+var QRUtil = require('./QRUtil');
+var QRPolynomial = require('./QRPolynomial');
+var QRRSBlock = require('./QRRSBlock');
+var QRBitBuffer = require('./QRBitBuffer');
+
+function QRCode(typeNumber, errorCorrectLevel) {
+	this.typeNumber = typeNumber;
+	this.errorCorrectLevel = errorCorrectLevel;
+	this.modules = null;
+	this.moduleCount = 0;
+	this.dataCache = null;
+	this.dataList = [];
+}
+
+QRCode.prototype = {
+	
+	addData : function(data) {
+		var newData = new QR8bitByte(data);
+		this.dataList.push(newData);
+		this.dataCache = null;
+	},
+	
+	isDark : function(row, col) {
+		if (row < 0 || this.moduleCount <= row || col < 0 || this.moduleCount <= col) {
+			throw new Error(row + "," + col);
+		}
+		return this.modules[row][col];
+	},
+
+	getModuleCount : function() {
+		return this.moduleCount;
+	},
+	
+	make : function() {
+		// Calculate automatically typeNumber if provided is < 1
+		if (this.typeNumber < 1 ){
+			var typeNumber = 1;
+			for (typeNumber = 1; typeNumber < 40; typeNumber++) {
+				var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, this.errorCorrectLevel);
+
+				var buffer = new QRBitBuffer();
+				var totalDataCount = 0;
+				for (var i = 0; i < rsBlocks.length; i++) {
+					totalDataCount += rsBlocks[i].dataCount;
+				}
+
+				for (var x = 0; x < this.dataList.length; x++) {
+					var data = this.dataList[x];
+					buffer.put(data.mode, 4);
+					buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+					data.write(buffer);
+				}
+				if (buffer.getLengthInBits() <= totalDataCount * 8)
+					break;
+			}
+			this.typeNumber = typeNumber;
+		}
+		this.makeImpl(false, this.getBestMaskPattern() );
+	},
+	
+	makeImpl : function(test, maskPattern) {
+		
+		this.moduleCount = this.typeNumber * 4 + 17;
+		this.modules = new Array(this.moduleCount);
+		
+		for (var row = 0; row < this.moduleCount; row++) {
+			
+			this.modules[row] = new Array(this.moduleCount);
+			
+			for (var col = 0; col < this.moduleCount; col++) {
+				this.modules[row][col] = null;//(col + row) % 3;
+			}
+		}
+	
+		this.setupPositionProbePattern(0, 0);
+		this.setupPositionProbePattern(this.moduleCount - 7, 0);
+		this.setupPositionProbePattern(0, this.moduleCount - 7);
+		this.setupPositionAdjustPattern();
+		this.setupTimingPattern();
+		this.setupTypeInfo(test, maskPattern);
+		
+		if (this.typeNumber >= 7) {
+			this.setupTypeNumber(test);
+		}
+	
+		if (this.dataCache === null) {
+			this.dataCache = QRCode.createData(this.typeNumber, this.errorCorrectLevel, this.dataList);
+		}
+	
+		this.mapData(this.dataCache, maskPattern);
+	},
+
+	setupPositionProbePattern : function(row, col)  {
+		
+		for (var r = -1; r <= 7; r++) {
+			
+			if (row + r <= -1 || this.moduleCount <= row + r) continue;
+			
+			for (var c = -1; c <= 7; c++) {
+				
+				if (col + c <= -1 || this.moduleCount <= col + c) continue;
+				
+				if ( (0 <= r && r <= 6 && (c === 0 || c === 6) ) || 
+                     (0 <= c && c <= 6 && (r === 0 || r === 6) ) || 
+                     (2 <= r && r <= 4 && 2 <= c && c <= 4) ) {
+					this.modules[row + r][col + c] = true;
+				} else {
+					this.modules[row + r][col + c] = false;
+				}
+			}		
+		}		
+	},
+	
+	getBestMaskPattern : function() {
+	
+		var minLostPoint = 0;
+		var pattern = 0;
+	
+		for (var i = 0; i < 8; i++) {
+			
+			this.makeImpl(true, i);
+	
+			var lostPoint = QRUtil.getLostPoint(this);
+	
+			if (i === 0 || minLostPoint >  lostPoint) {
+				minLostPoint = lostPoint;
+				pattern = i;
+			}
+		}
+	
+		return pattern;
+	},
+	
+	createMovieClip : function(target_mc, instance_name, depth) {
+	
+		var qr_mc = target_mc.createEmptyMovieClip(instance_name, depth);
+		var cs = 1;
+	
+		this.make();
+
+		for (var row = 0; row < this.modules.length; row++) {
+			
+			var y = row * cs;
+			
+			for (var col = 0; col < this.modules[row].length; col++) {
+	
+				var x = col * cs;
+				var dark = this.modules[row][col];
+			
+				if (dark) {
+					qr_mc.beginFill(0, 100);
+					qr_mc.moveTo(x, y);
+					qr_mc.lineTo(x + cs, y);
+					qr_mc.lineTo(x + cs, y + cs);
+					qr_mc.lineTo(x, y + cs);
+					qr_mc.endFill();
+				}
+			}
+		}
+		
+		return qr_mc;
+	},
+
+	setupTimingPattern : function() {
+		
+		for (var r = 8; r < this.moduleCount - 8; r++) {
+			if (this.modules[r][6] !== null) {
+				continue;
+			}
+			this.modules[r][6] = (r % 2 === 0);
+		}
+	
+		for (var c = 8; c < this.moduleCount - 8; c++) {
+			if (this.modules[6][c] !== null) {
+				continue;
+			}
+			this.modules[6][c] = (c % 2 === 0);
+		}
+	},
+	
+	setupPositionAdjustPattern : function() {
+	
+		var pos = QRUtil.getPatternPosition(this.typeNumber);
+		
+		for (var i = 0; i < pos.length; i++) {
+		
+			for (var j = 0; j < pos.length; j++) {
+			
+				var row = pos[i];
+				var col = pos[j];
+				
+				if (this.modules[row][col] !== null) {
+					continue;
+				}
+				
+				for (var r = -2; r <= 2; r++) {
+				
+					for (var c = -2; c <= 2; c++) {
+					
+						if (Math.abs(r) === 2 || 
+                            Math.abs(c) === 2 ||
+                            (r === 0 && c === 0) ) {
+							this.modules[row + r][col + c] = true;
+						} else {
+							this.modules[row + r][col + c] = false;
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	setupTypeNumber : function(test) {
+	
+		var bits = QRUtil.getBCHTypeNumber(this.typeNumber);
+        var mod;
+	
+		for (var i = 0; i < 18; i++) {
+			mod = (!test && ( (bits >> i) & 1) === 1);
+			this.modules[Math.floor(i / 3)][i % 3 + this.moduleCount - 8 - 3] = mod;
+		}
+	
+		for (var x = 0; x < 18; x++) {
+			mod = (!test && ( (bits >> x) & 1) === 1);
+			this.modules[x % 3 + this.moduleCount - 8 - 3][Math.floor(x / 3)] = mod;
+		}
+	},
+	
+	setupTypeInfo : function(test, maskPattern) {
+	
+		var data = (this.errorCorrectLevel << 3) | maskPattern;
+		var bits = QRUtil.getBCHTypeInfo(data);
+        var mod;
+	
+		// vertical		
+		for (var v = 0; v < 15; v++) {
+	
+			mod = (!test && ( (bits >> v) & 1) === 1);
+	
+			if (v < 6) {
+				this.modules[v][8] = mod;
+			} else if (v < 8) {
+				this.modules[v + 1][8] = mod;
+			} else {
+				this.modules[this.moduleCount - 15 + v][8] = mod;
+			}
+		}
+	
+		// horizontal
+		for (var h = 0; h < 15; h++) {
+	
+			mod = (!test && ( (bits >> h) & 1) === 1);
+			
+			if (h < 8) {
+				this.modules[8][this.moduleCount - h - 1] = mod;
+			} else if (h < 9) {
+				this.modules[8][15 - h - 1 + 1] = mod;
+			} else {
+				this.modules[8][15 - h - 1] = mod;
+			}
+		}
+	
+		// fixed module
+		this.modules[this.moduleCount - 8][8] = (!test);
+	
+	},
+	
+	mapData : function(data, maskPattern) {
+		
+		var inc = -1;
+		var row = this.moduleCount - 1;
+		var bitIndex = 7;
+		var byteIndex = 0;
+		
+		for (var col = this.moduleCount - 1; col > 0; col -= 2) {
+	
+			if (col === 6) col--;
+	
+			while (true) {
+	
+				for (var c = 0; c < 2; c++) {
+					
+					if (this.modules[row][col - c] === null) {
+						
+						var dark = false;
+	
+						if (byteIndex < data.length) {
+							dark = ( ( (data[byteIndex] >>> bitIndex) & 1) === 1);
+						}
+	
+						var mask = QRUtil.getMask(maskPattern, row, col - c);
+	
+						if (mask) {
+							dark = !dark;
+						}
+						
+						this.modules[row][col - c] = dark;
+						bitIndex--;
+	
+						if (bitIndex === -1) {
+							byteIndex++;
+							bitIndex = 7;
+						}
+					}
+				}
+								
+				row += inc;
+	
+				if (row < 0 || this.moduleCount <= row) {
+					row -= inc;
+					inc = -inc;
+					break;
+				}
+			}
+		}
+		
+	}
+
+};
+
+QRCode.PAD0 = 0xEC;
+QRCode.PAD1 = 0x11;
+
+QRCode.createData = function(typeNumber, errorCorrectLevel, dataList) {
+	
+	var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectLevel);
+	
+	var buffer = new QRBitBuffer();
+	
+	for (var i = 0; i < dataList.length; i++) {
+		var data = dataList[i];
+		buffer.put(data.mode, 4);
+		buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+		data.write(buffer);
+	}
+
+	// calc num max data.
+	var totalDataCount = 0;
+	for (var x = 0; x < rsBlocks.length; x++) {
+		totalDataCount += rsBlocks[x].dataCount;
+	}
+
+	if (buffer.getLengthInBits() > totalDataCount * 8) {
+		throw new Error("code length overflow. (" + 
+            buffer.getLengthInBits() + 
+            ">" +  
+            totalDataCount * 8 + 
+            ")");
+	}
+
+	// end code
+	if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+		buffer.put(0, 4);
+	}
+
+	// padding
+	while (buffer.getLengthInBits() % 8 !== 0) {
+		buffer.putBit(false);
+	}
+
+	// padding
+	while (true) {
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD0, 8);
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD1, 8);
+	}
+
+	return QRCode.createBytes(buffer, rsBlocks);
+};
+
+QRCode.createBytes = function(buffer, rsBlocks) {
+
+	var offset = 0;
+	
+	var maxDcCount = 0;
+	var maxEcCount = 0;
+	
+	var dcdata = new Array(rsBlocks.length);
+	var ecdata = new Array(rsBlocks.length);
+	
+	for (var r = 0; r < rsBlocks.length; r++) {
+
+		var dcCount = rsBlocks[r].dataCount;
+		var ecCount = rsBlocks[r].totalCount - dcCount;
+
+		maxDcCount = Math.max(maxDcCount, dcCount);
+		maxEcCount = Math.max(maxEcCount, ecCount);
+		
+		dcdata[r] = new Array(dcCount);
+		
+		for (var i = 0; i < dcdata[r].length; i++) {
+			dcdata[r][i] = 0xff & buffer.buffer[i + offset];
+		}
+		offset += dcCount;
+		
+		var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+		var rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+		var modPoly = rawPoly.mod(rsPoly);
+		ecdata[r] = new Array(rsPoly.getLength() - 1);
+		for (var x = 0; x < ecdata[r].length; x++) {
+            var modIndex = x + modPoly.getLength() - ecdata[r].length;
+			ecdata[r][x] = (modIndex >= 0)? modPoly.get(modIndex) : 0;
+		}
+
+	}
+	
+	var totalCodeCount = 0;
+	for (var y = 0; y < rsBlocks.length; y++) {
+		totalCodeCount += rsBlocks[y].totalCount;
+	}
+
+	var data = new Array(totalCodeCount);
+	var index = 0;
+
+	for (var z = 0; z < maxDcCount; z++) {
+		for (var s = 0; s < rsBlocks.length; s++) {
+			if (z < dcdata[s].length) {
+				data[index++] = dcdata[s][z];
+			}
+		}
+	}
+
+	for (var xx = 0; xx < maxEcCount; xx++) {
+		for (var t = 0; t < rsBlocks.length; t++) {
+			if (xx < ecdata[t].length) {
+				data[index++] = ecdata[t][xx];
+			}
+		}
+	}
+
+	return data;
+
+};
+
+module.exports = QRCode;
+
+};
+return req('index');})();
+</script>
+<script>
+'use strict';
+/* Poonam Care - shared code (database, PIN pad, siren, location, email, helpers) */
+const PC = { brand: 'Poonam Care', tag: "Girls' Safety & Security", country: '91', views: {} };
+const $ = (s, r) => (r || document).querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+PC.esc = esc;
+
+PC.qs = new URLSearchParams(location.search);
+PC.view = PC.qs.get('v') || '';
+PC.id = (PC.qs.get('id') || '').replace(/[^a-z0-9]/gi, '');
+PC.hostOk = h => /^[a-z0-9-]+(\.[a-z0-9-]+)*\.(firebaseio\.com|firebasedatabase\.app)$/i.test(h);
+PC.host = (PC.qs.get('d') || '').replace(/^https?:\/\//, '').replace(/[\/\s]+$/, '');
+if (PC.host && !PC.hostOk(PC.host)) PC.host = '__bad__';
+PC.demo = !PC.host;
+PC.setHost = h => { PC.host = (h || '').replace(/^https?:\/\//, '').replace(/[\/\s]+$/, ''); PC.demo = !PC.host; };
+
+PC.arr = x => (Array.isArray(x) ? x.filter(v => v != null) : x && typeof x === 'object' ? Object.values(x) : []);
+PC.rand = (n) => { const a = new Uint8Array(n); crypto.getRandomValues(a); return Array.from(a, b => (b % 36).toString(36)).join(''); };
+PC.sha256 = async s => { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)); return Array.from(new Uint8Array(b), x => x.toString(16).padStart(2, '0')).join(''); };
+PC.hashPin = (salt, pin) => PC.sha256(salt + ':' + pin);
+PC.digits = s => String(s || '').replace(/\D/g, '');
+PC.normPhone = s => { let d = PC.digits(s); if (d.length === 10) d = PC.country + d; else if (d.length === 11 && d[0] === '0') d = PC.country + d.slice(1); return d; };
+PC.mapLink = (lat, lng) => 'https://www.google.com/maps?q=' + lat + ',' + lng;
+PC.timeStr = t => new Date(t).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+PC.dist = (a, b) => { const R = 6371000, r = Math.PI / 180, dLa = (b.lat - a.lat) * r, dLo = (b.lng - a.lng) * r;
+  const x = Math.sin(dLa / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLo / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(x)); };
+PC.MODES = { walk: '🚶', rickshaw: '🛺', bike: '🏍️', bus: '🚌', car: '🚗', unknown: '📍' };
+
+/* ---------- database: Firebase REST, or a local test database when no host is given ---------- */
+PC.db = (function () {
+  const KEY = 'pc_demo_db';
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { return {}; } };
+  const save = o => localStorage.setItem(KEY, JSON.stringify(o));
+  const parts = p => p.split('/').filter(Boolean);
+  function dget(path) { let c = load(); for (const k of parts(path)) { if (c == null || typeof c !== 'object' || !(k in c)) return null; c = c[k]; } return c === undefined ? null : c; }
+  function dput(path, val) {
+    const o = load(), ks = parts(path); let c = o;
+    for (let i = 0; i < ks.length - 1; i++) { if (c[ks[i]] == null || typeof c[ks[i]] !== 'object') c[ks[i]] = {}; c = c[ks[i]]; }
+    if (val === null) delete c[ks[ks.length - 1]]; else c[ks[ks.length - 1]] = val;
+    save(o);
+  }
+  function last(obj, n) { if (!obj || typeof obj !== 'object') return obj; const ks = Object.keys(obj).sort().slice(-n), r = {}; ks.forEach(k => r[k] = obj[k]); return r; }
+  async function call(method, path, body, query) {
+    const ctl = new AbortController(), to = setTimeout(() => ctl.abort(), 9000);
+    try {
+      const init = { method, signal: ctl.signal };
+      if (body !== undefined) { init.body = JSON.stringify(body); if (init.body.length < 60000) init.keepalive = true; }
+      const r = await fetch('https://' + PC.host + '/' + path + '.json' + (query || ''), init);
+      if (!r.ok) throw new Error('Database error ' + r.status);
+      return await r.json();
+    } finally { clearTimeout(to); }
+  }
+  const newKey = () => '-' + Date.now().toString(36).padStart(9, '0') + PC.rand(5);
+  return {
+    async get(path, lastN) {
+      if (PC.demo) { const v = dget(path); return lastN ? last(v, lastN) : v; }
+      return call('GET', path, undefined, lastN ? '?orderBy=%22%24key%22&limitToLast=' + lastN : '');
+    },
+    async put(path, val) { if (PC.demo) { dput(path, val); return val; } return call('PUT', path, val); },
+    async patch(path, obj) { if (PC.demo) { Object.keys(obj).forEach(k => dput(path + '/' + k, obj[k])); return obj; } return call('PATCH', path, obj); },
+    async post(path, val) { if (PC.demo) { const k = newKey(); dput(path + '/' + k, val); return { name: k }; } return call('POST', path, val); },
+    async del(path) { if (PC.demo) { dput(path, null); return null; } return call('DELETE', path); }
+  };
+})();
+
+/* ---------- small UI helpers ---------- */
+PC.toast = (msg, ms) => {
+  let t = $('#toast'); if (!t) { t = document.createElement('div'); t.id = 'toast'; document.body.appendChild(t); }
+  t.textContent = msg; t.className = 'show'; clearTimeout(PC._tt); PC._tt = setTimeout(() => t.className = '', ms || 2600);
+};
+PC.call = num => { location.href = 'tel:' + String(num).replace(/[^\d+]/g, ''); };
+PC.wa = (num, text) => 'https://wa.me/' + PC.normPhone(num) + '?text=' + encodeURIComponent(text);
+PC.sms = (num, text) => 'sms:' + String(num).replace(/[^\d+]/g, '') + '?body=' + encodeURIComponent(text);
+PC.mail = (to, subj, body) => 'mailto:' + encodeURIComponent(to) + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+PC.noCopy = root => { (root || document).querySelectorAll('.nocopy').forEach(e => { e.addEventListener('contextmenu', ev => ev.preventDefault()); e.addEventListener('copy', ev => ev.preventDefault()); }); };
+
+PC.message = (app, title, text, extra) => {
+  app.innerHTML = `<div class="wrap center"><img class="logo-sm" src="logo.webp" alt="${PC.brand}"><h1>${esc(title)}</h1><p class="muted">${esc(text)}</p>${extra || ''}<p class="foot">${PC.brand} &middot; ${PC.tag}</p></div>`;
+};
+
+/* PIN pad. onSubmit(pin) -> true (accepted) | string (error text). Resolves true, or null if cancelled. */
+PC.pinPad = function (o) {
+  return new Promise(resolve => {
+    const m = document.createElement('div'); m.className = 'modal';
+    m.innerHTML = `<div class="sheet pin"><h3>${esc(o.title)}</h3><p class="muted s">${esc(o.sub || '')}</p>
+      <div class="dots"><i></i><i></i><i></i><i></i></div><p class="err" aria-live="polite"></p>
+      <div class="pad">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `<button type="button" data-k="${n}">${n}</button>`).join('')}
+      <button type="button" class="ghost" data-k="x">${esc(o.cancelText || 'Cancel')}</button><button type="button" data-k="0">0</button><button type="button" class="ghost" data-k="b">&#9003;</button></div></div>`;
+    document.body.appendChild(m);
+    let pin = '', busy = false;
+    const dots = m.querySelectorAll('.dots i'), err = m.querySelector('.err');
+    const paint = () => dots.forEach((d, i) => d.className = i < pin.length ? 'on' : '');
+    const close = v => { document.removeEventListener('keydown', key); m.remove(); resolve(v); };
+    async function press(k) {
+      if (busy) return;
+      if (k === 'x') return close(null);
+      if (k === 'b') { pin = pin.slice(0, -1); err.textContent = ''; return paint(); }
+      if (pin.length >= 4) return;
+      pin += k; paint();
+      if (pin.length === 4) {
+        busy = true; let r;
+        try { r = await o.onSubmit(pin); } catch (e) { r = String(e.message || e); }
+        busy = false;
+        if (r === true) return close(true);
+        err.textContent = r || 'Wrong PIN'; pin = ''; paint(); m.firstChild.classList.add('shake'); setTimeout(() => m.firstChild.classList.remove('shake'), 400);
+      }
+    }
+    const key = e => { if (/^\d$/.test(e.key)) press(e.key); else if (e.key === 'Backspace') press('b'); else if (e.key === 'Escape') press('x'); };
+    document.addEventListener('keydown', key);
+    m.addEventListener('click', e => { const b = e.target.closest('button[data-k]'); if (b) press(b.dataset.k); });
+  });
+};
+/* Checks a PIN with a short lock after repeated mistakes (kept in this browser only) */
+PC.pinCheck = async function (rec, which, pin) {
+  const lk = JSON.parse(sessionStorage.getItem('pc_lock') || '{"n":0,"u":0}');
+  if (Date.now() < lk.u) return 'Too many tries. Wait ' + Math.ceil((lk.u - Date.now()) / 1000) + 's';
+  const ok = (await PC.hashPin(rec.salt, pin)) === rec[which === 'g' ? 'gh' : 'ph'];
+  if (ok) { sessionStorage.setItem('pc_lock', '{"n":0,"u":0}'); return true; }
+  lk.n++; if (lk.n >= 5) { lk.u = Date.now() + 30000; lk.n = 0; }
+  sessionStorage.setItem('pc_lock', JSON.stringify(lk)); return 'Wrong PIN';
+};
+
+/* ---------- siren + vibration (needs one tap on the page first, which the PIN / hold already is) ---------- */
+PC.siren = {
+  ctx: null, osc: null, gain: null, tm: null, vb: null, on: false,
+  unlock() { try { if (!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)(); if (this.ctx.state === 'suspended') this.ctx.resume(); } catch (e) { } },
+  start() {
+    this.unlock(); if (this.on || !this.ctx) return; this.on = true;
+    try {
+      const c = this.ctx; this.osc = c.createOscillator(); this.gain = c.createGain(); this.osc.type = 'sawtooth'; this.gain.gain.value = 0.6;
+      this.osc.connect(this.gain); this.gain.connect(c.destination); this.osc.start(); let up = true;
+      const sweep = () => { const t = c.currentTime; this.osc.frequency.cancelScheduledValues(t); this.osc.frequency.setValueAtTime(up ? 650 : 1250, t); this.osc.frequency.linearRampToValueAtTime(up ? 1250 : 650, t + 0.55); up = !up; };
+      sweep(); this.tm = setInterval(sweep, 560);
+    } catch (e) { }
+    const v = () => navigator.vibrate && navigator.vibrate([400, 200, 400]); v(); this.vb = setInterval(v, 1200);
+  },
+  stop() { this.on = false; clearInterval(this.tm); clearInterval(this.vb); try { this.osc && this.osc.stop(); } catch (e) { } this.osc = null; navigator.vibrate && navigator.vibrate(0); }
+};
+
+/* ---------- location, keep-awake, battery ---------- */
+PC.getPos = (ms) => new Promise(res => {
+  if (!navigator.geolocation) return res(null);
+  navigator.geolocation.getCurrentPosition(p => res({ lat: p.coords.latitude, lng: p.coords.longitude, acc: Math.round(p.coords.accuracy), t: Date.now() }), () => res(null), { enableHighAccuracy: true, timeout: ms || 8000, maximumAge: 15000 });
+});
+PC.wake = { lock: null,
+  async on() { try { if ('wakeLock' in navigator && !this.lock) { this.lock = await navigator.wakeLock.request('screen'); this.lock.addEventListener('release', () => { this.lock = null; }); } } catch (e) { } },
+  off() { try { this.lock && this.lock.release(); } catch (e) { } this.lock = null; } };
+PC.battery = async () => { try { if (navigator.getBattery) { const b = await navigator.getBattery(); return Math.round(b.level * 100); } } catch (e) { } return null; };
+
+/* ---------- email through EmailJS (free plan), sent straight from the page ---------- */
+PC.sendEmail = async function (mail, to, subject, message, mapLink, name) {
+  if (!mail || !mail.s || !mail.t || !mail.k) throw new Error('Email service not set up');
+  const ctl = new AbortController(), to_ = setTimeout(() => ctl.abort(), 10000);
+  try {
+    const r = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST', signal: ctl.signal, keepalive: true, headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ service_id: mail.s, template_id: mail.t, user_id: mail.k, template_params: { to_email: to, subject, message, map_link: mapLink || '', girl_name: name || '', from_name: PC.brand } })
+    });
+    if (!r.ok) throw new Error('Email failed (' + r.status + ')');
+    return true;
+  } finally { clearTimeout(to_); }
+};
+
+/* ---------- 3D tilt for the hero card ---------- */
+PC.tilt = el => {
+  if (!el) return;
+  el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; el.style.setProperty('--ry', (x * 18) + 'deg'); el.style.setProperty('--rx', (-y * 14) + 'deg'); });
+  el.addEventListener('pointerleave', () => { el.style.setProperty('--ry', '-8deg'); el.style.setProperty('--rx', '6deg'); });
+};
+
+/* ---------- consent texts ---------- */
+PC.CONSENT = {
+  en: ['Poonam Care shares this person\'s live location and emergency alerts only with the family contacts saved here.',
+    'Live location starts only when Get Started is pressed with the PIN, and stops only with the PIN.',
+    'If the person is under 18, a parent or guardian must agree.',
+    'Poonam Care is a help tool, not a guarantee. In danger, always call 112.'],
+  hi: ['पूनम केयर इस व्यक्ति की लाइव लोकेशन और इमरजेंसी अलर्ट सिर्फ़ यहाँ सेव किए गए परिवार के लोगों को भेजता है।',
+    'लाइव लोकेशन तभी चालू होती है जब PIN डालकर Get Started दबाया जाए, और PIN से ही बंद होती है।',
+    'अगर व्यक्ति 18 साल से कम है, तो माता-पिता या अभिभावक की सहमति ज़रूरी है।',
+    'पूनम केयर मदद का एक ज़रिया है, गारंटी नहीं। खतरे में हमेशा 112 पर कॉल करें।']
+};
+
+/* ---------- start ---------- */
+PC.start = async function () {
+  const app = $('#app');
+  try {
+    if (PC.host === '__bad__') return PC.message(app, 'Invalid link', 'This QR link is not valid.');
+    const v = PC.view, f = PC.views[v];
+    if (!f) return app.innerHTML = `<div class="wrap center"><img class="logo-lg" src="logo.webp" alt="${PC.brand}"><h1>${PC.brand}</h1><p class="muted">${PC.tag}</p><p class="muted s">Scan your ${PC.brand} QR code to open.</p></div>`;
+    await f(app);
+  } catch (e) { PC.message(app, 'Something went wrong', String(e.message || e)); }
+};
+
+'use strict';
+/* Person's page (English): emergency contacts, Get Started (PIN), left / reached, RED ALERT */
+PC.views.g = async function (app) {
+  const id = PC.id;
+  if (!id) return PC.message(app, 'Invalid QR', 'This QR code is not valid.');
+  let rec;
+  try { rec = await PC.db.get('g/' + id); } catch (e) { return PC.message(app, 'No internet', 'Could not reach the service. Check your internet and scan again.'); }
+  if (!rec) return PC.message(app, 'Invalid QR', 'This QR code is not valid or has been removed.');
+  if (rec.active === false) return PC.message(app, 'Service is off', 'This service is switched off right now. Please contact ' + PC.brand + '.');
+
+  const top = () => `<div class="top"><img class="tl" id="hero" src="logo.webp" alt=""><div><b>${PC.brand}</b><span>${PC.tag}</span></div></div>`;
+  const contacts = () => PC.arr(rec.contacts);
+  const allEmails = () => [...new Set([...PC.arr(rec.emails), ...contacts().map(c => c.email)].filter(Boolean))];
+  const HELP = [['112', 'Emergency 112'], ['100', 'Police 100'], ['181', 'Women helpline 181'], ['1091', 'Women 1091']];
+  const PLACES = [['school', 'School', '🏫'], ['job', 'Job', '💼'], ['college', 'College', '🎓'], ['home', 'Home', '🏠'], ['other', 'Other', '📍']];
+
+  if (!rec.consent) return consent();
+
+  /* ---------- agreement ---------- */
+  function consent() {
+    app.innerHTML = `<div class="wrap">${top()}<div class="card"><h2>Agreement</h2><p><b>${esc(rec.name)}</b></p><ul class="cons">${PC.CONSENT.en.map(x => '<li>' + esc(x) + '</li>').join('')}</ul>
+      <label class="chk"><input type="checkbox" id="ag"><span>I agree. (I am this person, or the parent/guardian if under 18.)</span></label>
+      <button class="b3 big" id="go">I agree &middot; enter PIN</button></div><p class="foot">${PC.brand} &middot; ${PC.tag}</p></div>`;
+    PC.tilt($('#hero'));
+    $('#go').onclick = async () => {
+      if (!$('#ag').checked) return PC.toast('Please tick the box to agree');
+      const ok = await PC.pinPad({ title: 'Enter PIN to agree', sub: 'The PIN given by ' + PC.brand, onSubmit: p => PC.pinCheck(rec, 'g', p) });
+      if (!ok) return;
+      rec.consent = { at: Date.now(), by: 'person' };
+      try { await PC.db.patch('g/' + id, { consent: rec.consent }); } catch (e) { return PC.toast('No internet. Try again.'); }
+      location.reload();
+    };
+  }
+
+  /* ---------- main page ---------- */
+  const T = { on: false, mode: 'walk', last: null, watch: null, timer: null, since: 0, sentAt: 0, fail: 0, err: '', anchor: null, stopFlag: false, trailPt: null, trailAt: 0 };
+  let alerting = false;
+
+  app.innerHTML = `<div class="wrap">${top()}
+    <div class="card glass"><h2>Emergency contacts</h2><div class="grid2 nocopy" id="people"></div><div class="help nocopy" id="help" style="margin-top:12px"></div></div>
+    <div class="card" id="trk"></div>
+    <div class="card"><h2>Your trip</h2><div class="grid2"><button class="b3 pink" id="bLeft">I have left</button><button class="b3 green" id="bReach">I have reached</button></div>
+      <p class="muted s" style="margin:10px 0 0">Your family is told right away. These buttons stay here all day.</p></div>
+    <p class="foot">${PC.brand} &middot; ${PC.tag}<br>In danger, always call 112.</p></div>
+    <div class="sos"><div class="in"><button class="hold" id="hold" aria-label="Red alert, press and hold for 2 seconds"><span class="fill"></span><span class="t">RED ALERT / EMERGENCY<small>Press and hold for 2 seconds</small></span></button></div></div>`;
+  PC.tilt($('#hero'));
+
+  $('#people').innerHTML = contacts().map((c, i) => `<div class="person"><div class="nm"><em>${esc(((c.name || '?').trim()[0] || '?').toUpperCase())}</em>${esc(c.name)}</div>
+      <div class="row"><button class="b3 sm green" data-call="${i}">Call</button>${c.email ? `<button class="b3 sm light" data-mail="${i}">Email</button>` : ''}</div></div>`).join('')
+    || '<p class="muted">No contacts saved.</p>';
+  $('#help').innerHTML = HELP.map(h => `<button class="b3 sm light" data-help="${h[0]}">${esc(h[1])}</button>`).join('');
+  PC.noCopy(app);
+  app.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.call != null) PC.call(contacts()[b.dataset.call].phone);
+    else if (b.dataset.mail != null) { const c = contacts()[b.dataset.mail]; location.href = PC.mail(c.email, 'Help needed: ' + rec.name, 'Please help ' + rec.name + '.' + (T.last ? ' Location: ' + PC.mapLink(T.last.lat, T.last.lng) : '')); }
+    else if (b.dataset.help) PC.call(b.dataset.help);
+  });
+  $('#bLeft').onclick = () => placeSheet('left');
+  $('#bReach').onclick = () => placeSheet('reached');
+  holdButton($('#hold'), 2000, triggerAlert);
+  paintTrack();
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && T.on) { PC.wake.on(); push(); } });
+
+  function holdButton(btn, ms, done) {
+    const fill = btn.querySelector('.fill'); let t0 = 0, raf = 0;
+    const stop = () => { cancelAnimationFrame(raf); t0 = 0; btn.classList.remove('down'); fill.style.width = '0'; };
+    const tick = () => { if (!t0) return; const p = Math.min(1, (performance.now() - t0) / ms); fill.style.width = (p * 100) + '%'; if (p >= 1) { stop(); done(); } else raf = requestAnimationFrame(tick); };
+    btn.addEventListener('pointerdown', e => { e.preventDefault(); PC.siren.unlock(); btn.classList.add('down'); t0 = performance.now(); tick(); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(ev => btn.addEventListener(ev, stop));
+    btn.addEventListener('contextmenu', e => e.preventDefault());
+  }
+
+  /* ---------- live location ---------- */
+  function paintTrack() {
+    const el = $('#trk');
+    if (!T.on) {
+      el.innerHTML = `<h2>Live location <span class="pill off"><i></i>OFF</span></h2><p class="muted">Press Get Started and enter your PIN. Your live location then goes to your family.</p><button class="b3 big" id="gs">Get Started</button>`;
+      $('#gs').onclick = getStarted; return;
+    }
+    const age = T.sentAt ? Math.round((Date.now() - T.sentAt) / 1000) : null;
+    el.innerHTML = `<h2>Live location <span class="pill on"><i></i>ON</span></h2>
+      <div class="chips" id="modes">${Object.keys(PC.MODES).filter(k => k !== 'unknown').map(k => `<button class="chip ${T.mode === k ? 'sel' : ''}" data-m="${k}"><span>${PC.MODES[k]}</span><small>${{ walk: 'Walk', rickshaw: 'Rickshaw', bike: 'Bike', bus: 'Bus', car: 'Car' }[k]}</small></button>`).join('')}</div>
+      <p class="muted s" style="margin:10px 0">${T.err ? esc(T.err) : T.last ? 'GPS accuracy about ' + T.last.acc + ' m' : 'Finding your location…'}${age != null ? ' &middot; family updated ' + (age < 5 ? 'just now' : age + 's ago') : ''}${T.fail > 2 ? ' &middot; <b>no internet, retrying</b>' : ''}</p>
+      <p class="muted s" style="margin:0 0 10px">Keep this page open for best tracking.</p>
+      <button class="b3 light big" id="st">Stop sharing (PIN)</button>`;
+    $('#st').onclick = askStop;
+    $('#modes').onclick = e => { const b = e.target.closest('[data-m]'); if (!b) return; T.mode = b.dataset.m; event('mode', {}); push(); paintTrack(); };
+  }
+  async function getStarted() {
+    const ok = await PC.pinPad({ title: 'Enter your PIN', sub: 'Live location will start', onSubmit: p => PC.pinCheck(rec, 'g', p) });
+    if (ok) startTracking();
+  }
+  async function askStop() {
+    const ok = await PC.pinPad({ title: 'Enter PIN to stop', sub: 'Live location will stop', onSubmit: p => PC.pinCheck(rec, 'g', p) });
+    if (ok) stopTracking();
+  }
+  async function startTracking() {
+    if (T.on) return true;
+    if (!navigator.geolocation) { PC.toast('This device cannot share location'); return false; }
+    T.on = true; T.since = Date.now(); T.err = ''; T.stopFlag = false; T.anchor = null; T.trailPt = null;
+    paintTrack();
+    PC.db.del('t/' + id + '/trail').catch(() => { });
+    T.watch = navigator.geolocation.watchPosition(onPos, e => {
+      if (e.code === 1) { T.err = 'Location is blocked. Allow location for this page in your browser.'; PC.toast('Please allow location'); }
+      else T.err = 'Waiting for GPS…';
+      paintTrack();
+    }, { enableHighAccuracy: true, maximumAge: 3000, timeout: 25000 });
+    T.timer = setInterval(push, 5000);
+    PC.wake.on();
+    PC.db.patch('g/' + id, { tracking: { on: true, mode: T.mode, since: T.since } }).catch(() => { });
+    event('start', {});
+    return true;
+  }
+  async function stopTracking() {
+    T.on = false; clearInterval(T.timer); if (T.watch != null) navigator.geolocation.clearWatch(T.watch); T.watch = null; PC.wake.off();
+    try { await PC.db.patch('g/' + id, { tracking: { on: false, mode: T.mode, since: T.since } }); } catch (e) { }
+    event('stop_sharing', {}); paintTrack();
+  }
+  function onPos(p) {
+    const now = Date.now();
+    T.last = { lat: p.coords.latitude, lng: p.coords.longitude, acc: Math.round(p.coords.accuracy), t: now }; T.err = '';
+    if (!T.anchor) T.anchor = { lat: T.last.lat, lng: T.last.lng, t: now };
+    if (PC.dist(T.anchor, T.last) > 60) { T.anchor = { lat: T.last.lat, lng: T.last.lng, t: now }; T.stopFlag = false; }
+    else if (!T.stopFlag && now - T.anchor.t > 180000) { T.stopFlag = true; event('stop', {}); }
+    if (!T.sentAt) push();
+    paintTrack();
+  }
+  async function push() {
+    if (!T.on || !T.last) return;
+    const bat = await PC.battery(), loc = Object.assign({}, T.last, { mode: T.mode }); if (bat != null) loc.bat = bat;
+    try {
+      await PC.db.patch('g/' + id, { loc, tracking: { on: true, mode: T.mode, since: T.since } });
+      T.sentAt = Date.now(); T.fail = 0;
+      if (!T.trailPt || PC.dist(T.trailPt, T.last) > 12 || Date.now() - T.trailAt > 40000) {
+        T.trailPt = T.last; T.trailAt = Date.now();
+        await PC.db.post('t/' + id + '/trail', { lat: T.last.lat, lng: T.last.lng, t: T.last.t });
+      }
+    } catch (e) { T.fail++; }
+    paintTrack();
+  }
+  function event(type, extra) {
+    const o = Object.assign({ type, t: Date.now(), mode: T.mode }, extra || {});
+    if (T.last) { o.lat = T.last.lat; o.lng = T.last.lng; }
+    return PC.db.post('t/' + id + '/ev', o).catch(() => { });
+  }
+
+  /* ---------- left / reached ---------- */
+  function placeSheet(kind) {
+    const m = document.createElement('div'); m.className = 'modal';
+    m.innerHTML = `<div class="sheet"><h3>${kind === 'left' ? 'Where are you leaving from?' : 'Where did you reach?'}</h3><div class="opts">${PLACES.map(p => `<button class="b3 light" data-p="${p[0]}">${p[2]} ${p[1]}</button>`).join('')}<button class="b3 light" data-p="" style="grid-column:1/-1">Cancel</button></div></div>`;
+    document.body.appendChild(m);
+    m.onclick = async e => {
+      if (e.target === m) return m.remove();
+      const b = e.target.closest('[data-p]'); if (!b) return;
+      m.remove(); if (!b.dataset.p) return;
+      if (!T.last) { const p = await PC.getPos(4000); if (p) T.last = p; }
+      await event(kind, { place: b.dataset.p });
+      PC.toast(kind === 'left' ? 'Family informed: you have left' : 'Family informed: you have reached');
+      if (rec.marksMail && rec.mail) {
+        const link = T.last ? PC.mapLink(T.last.lat, T.last.lng) : '';
+        const msg = `${rec.name} has ${kind === 'left' ? 'left' : 'reached'} ${b.dataset.p}. ${link}`;
+        PC.arr(rec.emails).forEach(a => PC.sendEmail(rec.mail, a, `${rec.name} ${kind === 'left' ? 'left' : 'reached'}`, msg, link, rec.name).catch(() => { }));
+      }
+    };
+  }
+
+  /* ---------- RED ALERT ---------- */
+  async function triggerAlert() {
+    if (alerting) return; alerting = true;
+    PC.siren.start();
+    const box = document.createElement('div'); box.className = 'alertbox';
+    const people = contacts();
+    box.innerHTML = `<div class="in"><h1>RED ALERT</h1><p class="center" style="margin:0">${esc(rec.name)} &middot; help is being called</p>
+      <div class="box st" id="stt"><div>Family page: sending…</div><div>Emails: sending…</div><div>Location: finding…</div></div>
+      <button class="b3 green big" id="c112">Call 112 now</button><p class="center s" id="cd" style="min-height:20px"></p>
+      <div class="grid2 nocopy" id="ppl">${people.map((c, i) => `<div class="person"><div class="nm"><em>${esc(((c.name || '?').trim()[0] || '?').toUpperCase())}</em>${esc(c.name)}</div><div class="row"><button class="b3 sm green" data-c="${i}">Call</button><a class="b3 sm light" data-w="${i}" target="_blank" rel="noopener">WhatsApp</a><a class="b3 sm light" data-s="${i}">SMS</a></div></div>`).join('')}</div>
+      <div class="grid2" style="margin-top:14px"><button class="b3 light" id="ss">Stop siren</button><button class="b3 gold" id="safe">I am safe (PIN)</button></div></div>`;
+    document.body.appendChild(box);
+    PC.noCopy(box);
+    const row = i => $('#stt', box).children[i];
+    $('#c112', box).onclick = () => PC.call('112');
+    $('#ss', box).onclick = () => PC.siren.stop();
+    $('#safe', box).onclick = async () => {
+      const ok = await PC.pinPad({ title: 'Enter PIN', sub: 'Confirm you are safe', onSubmit: p => PC.pinCheck(rec, 'g', p) });
+      if (!ok) return;
+      PC.siren.stop(); box.remove(); alerting = false;
+      PC.db.patch('g/' + id + '/alert', { resolved: true, at: Date.now() }).catch(() => { }); event('safe', {});
+    };
+    box.addEventListener('click', e => { const b = e.target.closest('[data-c]'); if (b) PC.call(people[b.dataset.c].phone); });
+
+    const pos = T.last || await PC.getPos(6000);
+    if (pos && !T.last) T.last = pos;
+    const link = pos ? PC.mapLink(pos.lat, pos.lng) : '';
+    const live = rec.base ? rec.base + '?v=p&id=' + id + (PC.demo ? '' : '&d=' + PC.host) : '';
+    const text = `RED ALERT! ${rec.name} needs urgent help.${link ? ' Location: ' + link : ' Location not available yet.'}${live ? ' Live tracking: ' + live : ''} - ${PC.brand}`;
+    row(2).innerHTML = pos ? 'Location: found &#10004;' : 'Location: not found (GPS off?)';
+    people.forEach((c, i) => { const w = $('[data-w="' + i + '"]', box), s = $('[data-s="' + i + '"]', box); w.href = PC.wa(c.phone, text); s.href = PC.sms(c.phone, text); });
+
+    const dbJob = PC.db.patch('g/' + id, { alert: { id: PC.rand(8), t: Date.now(), lat: pos ? pos.lat : null, lng: pos ? pos.lng : null, resolved: false } })
+      .then(() => { row(0).innerHTML = 'Family page: updated &#10004;'; return true; }, () => { row(0).innerHTML = '<span class="no">Family page: could not update (no internet)</span>'; return false; });
+    event('alert', {});
+    const emails = allEmails();
+    let sent = 0, mailJob;
+    if (!rec.mail) { row(1).innerHTML = '<span class="no">Email service is not set up. Use the buttons below.</span>'; mailJob = Promise.resolve(); }
+    else if (!emails.length) { row(1).textContent = 'Emails: no email saved'; mailJob = Promise.resolve(); }
+    else mailJob = Promise.all(emails.map(a => PC.sendEmail(rec.mail, a, 'RED ALERT: ' + rec.name + ' needs help', text, link, rec.name).then(() => { sent++; row(1).innerHTML = 'Emails sent: ' + sent + ' of ' + emails.length + (sent === emails.length ? ' &#10004;' : ''); }, () => { }))).then(() => { if (sent < emails.length) row(1).innerHTML = '<span class="no">Emails sent: ' + sent + ' of ' + emails.length + '. Use the buttons below.</span>'; });
+    startTracking();
+
+    await Promise.race([Promise.all([dbJob, mailJob]), new Promise(r => setTimeout(r, 5000))]);
+    let n = 3, cancelled = false; const cd = $('#cd', box);
+    const cancel = document.createElement('button'); cancel.className = 'b3 light sm'; cancel.style.cssText = 'margin-left:8px;flex:none'; cancel.textContent = 'Cancel';
+    const tick = () => {
+      if (cancelled || !document.body.contains(box)) return;
+      if (n === 0) { cd.textContent = 'Opening the 112 dialer…'; return PC.call('112'); }
+      cd.textContent = 'Opening the 112 dialer in ' + n + '… '; cd.appendChild(cancel); n--; setTimeout(tick, 1000);
+    };
+    cancel.onclick = () => { cancelled = true; cd.textContent = ''; };
+    tick();
+  }
+};
+
+'use strict';
+/* Family page (Hindi): PIN, live 3D map, timeline, call buttons, alert with siren */
+PC.views.p = async function (app) {
+  const id = PC.id;
+  if (!id) return PC.message(app, 'गलत QR', 'यह QR कोड सही नहीं है।');
+  let rec;
+  try { rec = await PC.db.get('g/' + id); } catch (e) { return PC.message(app, 'इंटरनेट नहीं है', 'सेवा से जुड़ नहीं पाए। इंटरनेट देखकर दोबारा स्कैन करें।'); }
+  if (!rec) return PC.message(app, 'गलत QR', 'यह QR कोड सही नहीं है या हटा दिया गया है।');
+  if (rec.active === false) return PC.message(app, 'सेवा बंद है', 'यह सेवा अभी बंद है। कृपया ' + PC.brand + ' से संपर्क करें।');
+
+  const HI = { mother: 'मम्मी', father: 'पापा', brother: 'भाई', sister: 'बहन' };
+  const MODE_HI = { walk: 'पैदल', rickshaw: 'रिक्शा', bike: 'बाइक', bus: 'बस', car: 'कार', unknown: 'पता नहीं' };
+  const PLACE_HI = { school: 'स्कूल', job: 'जॉब', college: 'कॉलेज', home: 'घर', other: 'दूसरी जगह' };
+  const HELP = [['112', 'आपातकाल 112'], ['100', 'पुलिस 100'], ['181', 'महिला हेल्पलाइन 181'], ['1091', 'महिला 1091']];
+  const contacts = () => PC.arr(rec.contacts);
+  const lbl = c => HI[c.key] || c.name;
+  const top = () => `<div class="top"><img class="tl" id="hero" src="logo.webp" alt=""><div><b>${PC.brand}</b><span>${PC.tag}</span></div></div>`;
+
+  /* ---------- agreement ---------- */
+  if (!rec.consent) {
+    app.innerHTML = `<div class="wrap">${top()}<div class="card"><h2>सहमति</h2><p><b>${esc(rec.name)}</b></p><ul class="cons">${PC.CONSENT.hi.map(x => '<li>' + esc(x) + '</li>').join('')}</ul>
+      <label class="chk"><input type="checkbox" id="ag"><span>मैं सहमत हूँ। (मैं माता-पिता / अभिभावक या स्वयं व्यक्ति हूँ।)</span></label>
+      <button class="b3 big" id="go">सहमत हूँ &middot; PIN डालें</button></div><p class="foot">${PC.brand} &middot; ${PC.tag}</p></div>`;
+    PC.tilt($('#hero'));
+    $('#go').onclick = async () => {
+      if (!$('#ag').checked) return PC.toast('सहमति के लिए डिब्बे पर टिक करें');
+      const ok = await PC.pinPad({ title: 'PIN डालें', sub: 'सहमति के लिए', cancelText: 'रद्द करें', onSubmit: p => PC.pinCheck(rec, 'p', p) });
+      if (!ok) return;
+      try { await PC.db.patch('g/' + id, { consent: { at: Date.now(), by: 'parent' } }); } catch (e) { return PC.toast('इंटरनेट नहीं है। दोबारा कोशिश करें।'); }
+      location.reload();
+    };
+    return;
+  }
+
+  /* ---------- PIN gate ---------- */
+  app.innerHTML = `<div class="wrap center"><img class="logo-lg" id="hero" src="logo.webp" alt="${PC.brand}"><h1>${esc(rec.name)}</h1><p class="muted">लाइव लोकेशन देखने के लिए PIN डालें</p><button class="b3 big" id="go">शुरू करें</button><p class="foot">${PC.brand} &middot; ${PC.tag}</p></div>`;
+  $('#go').onclick = async () => {
+    const ok = await PC.pinPad({ title: 'अपना PIN डालें', sub: esc(rec.name) + ' की लोकेशन', cancelText: 'रद्द करें', onSubmit: p => { PC.siren.unlock(); return PC.pinCheck(rec, 'p', p); } });
+    if (ok) main();
+  };
+
+  /* ---------- 3D map (OpenStreetMap tiles, no extra library) ---------- */
+  function Map3D(host) {
+    const S = 1280, TS = 256; let z = 16, tilt = 50, c = null, trail = [], marks = [], tiles = {}, label = '', icon = '📍';
+    host.style.setProperty('--tilt', tilt + 'deg');
+    host.innerHTML = `<div class="plane"><svg></svg><div class="me"><div class="ring"></div><div class="pinx"><span class="ic"></span><b class="lb"></b></div></div></div>
+      <button class="mapbtn" style="top:8px" data-a="in" aria-label="zoom in">+</button><button class="mapbtn" style="top:56px" data-a="out" aria-label="zoom out">&minus;</button><button class="mapbtn" style="top:104px;font-size:14px" data-a="tilt">3D</button>
+      <div class="attr">&copy; OpenStreetMap</div><div class="nomap">लोकेशन का इंतज़ार…</div>`;
+    const plane = $('.plane', host), svg = $('svg', host);
+    const wp = (lat, lng) => { const n = TS * 2 ** z, s = Math.sin(lat * Math.PI / 180); return { x: (lng + 180) / 360 * n, y: (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * n }; };
+    function draw() {
+      if (!c) return; const nm = $('.nomap', host); if (nm) nm.remove();
+      const w = wp(c.lat, c.lng), ox = w.x - S / 2, oy = w.y - S / 2, n = 2 ** z;
+      const x0 = Math.floor(ox / TS), x1 = Math.floor((ox + S) / TS), y0 = Math.floor(oy / TS), y1 = Math.floor((oy + S) / TS), need = {};
+      for (let tx = x0; tx <= x1; tx++) for (let ty = y0; ty <= y1; ty++) {
+        if (ty < 0 || ty >= n) continue; const wx = ((tx % n) + n) % n, key = z + '/' + wx + '/' + ty + '@' + tx; need[key] = 1;
+        let im = tiles[key];
+        if (!im) { im = new Image(); im.alt = ''; im.draggable = false; im.onerror = () => { im.style.visibility = 'hidden'; }; im.src = 'https://tile.openstreetmap.org/' + z + '/' + wx + '/' + ty + '.png'; plane.insertBefore(im, plane.firstChild); tiles[key] = im; }
+        im.style.left = (tx * TS - ox) + 'px'; im.style.top = (ty * TS - oy) + 'px';
+      }
+      for (const k in tiles) if (!need[k]) { tiles[k].remove(); delete tiles[k]; }
+      const P = p => { const q = wp(p.lat, p.lng); return (q.x - ox).toFixed(1) + ',' + (q.y - oy).toFixed(1); };
+      let s = '';
+      if (trail.length > 1) { const pts = trail.map(P).join(' '); s += `<polyline points="${pts}" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><polyline points="${pts}" fill="none" stroke="#FF2E88" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>`; }
+      marks.forEach(m => { const [x, y] = P(m).split(','); s += `<circle cx="${x}" cy="${y}" r="9" fill="${m.col}" stroke="#fff" stroke-width="3"/>`; });
+      svg.innerHTML = s; $('.ic', host).textContent = icon; $('.lb', host).textContent = label;
+    }
+    host.addEventListener('click', e => { const b = e.target.closest('[data-a]'); if (!b) return; const a = b.dataset.a;
+      if (a === 'in' && z < 18) { z++; draw(); } else if (a === 'out' && z > 12) { z--; draw(); } else if (a === 'tilt') { tilt = tilt ? 0 : 50; host.style.setProperty('--tilt', tilt + 'deg'); } });
+    return { set(pos, tr, mk, ic, lb) { c = pos; trail = tr; marks = mk; icon = ic; label = lb; draw(); }, get zoom() { return z; } };
+  }
+
+  /* ---------- main ---------- */
+  let map, seenAlert = null, tick = 0, trail = [], events = [], offline = false, ovl = null;
+  function main() {
+    PC.wake.on();
+    app.innerHTML = `<div class="wrap">${top()}
+      <div id="ban"></div><div class="card" id="stat"></div>
+      <div class="map" id="map"></div>
+      <div class="grid2" style="margin-bottom:14px"><a class="b3 light" id="gm" target="_blank" rel="noopener">Google Maps में खोलें</a><button class="b3 green" id="callg">${esc(rec.name)} को कॉल</button></div>
+      <div class="card"><h2>आज का सफ़र</h2><ul class="tl" id="tl"><li class="muted">अभी कुछ नहीं।</li></ul></div>
+      <div class="card glass"><h2>परिवार और मदद</h2><div class="grid2 nocopy" id="ppl"></div><div class="help nocopy" id="help" style="margin-top:12px"></div></div>
+      <p class="foot">${PC.brand} &middot; ${PC.tag}<br>खतरे में हमेशा 112 पर कॉल करें।</p></div>`;
+    PC.tilt($('#hero'));
+    map = Map3D($('#map'));
+    $('#ppl').innerHTML = contacts().map((c, i) => `<div class="person"><div class="nm"><em>${esc((lbl(c).trim()[0] || '?'))}</em>${esc(lbl(c))}</div><div class="row"><button class="b3 sm green" data-call="${i}">कॉल करें</button>${c.email ? `<button class="b3 sm light" data-mail="${i}">ईमेल</button>` : ''}</div></div>`).join('');
+    $('#help').innerHTML = HELP.map(h => `<button class="b3 sm light" data-help="${h[0]}">${esc(h[1])}</button>`).join('');
+    PC.noCopy(app);
+    app.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return;
+      if (b.dataset.call != null) PC.call(contacts()[b.dataset.call].phone);
+      else if (b.dataset.mail != null) location.href = PC.mail(contacts()[b.dataset.mail].email, 'सुरक्षा: ' + rec.name, '');
+      else if (b.dataset.help) PC.call(b.dataset.help);
+      else if (b.id === 'callg') { if (rec.phone) PC.call(rec.phone); else PC.toast('इनका नंबर सेव नहीं है'); } });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) { PC.wake.on(); poll(true); } });
+    poll(true); setInterval(poll, 4000);
+  }
+
+  async function poll(force) {
+    try {
+      const r = await PC.db.get('g/' + id); offline = false;
+      if (!r) return; if (r.active === false) return location.reload(); rec = r;
+      if (force || tick % 3 === 0) {
+        const [t, e] = await Promise.all([PC.db.get('t/' + id + '/trail', 150).catch(() => null), PC.db.get('t/' + id + '/ev', 40).catch(() => null)]);
+        trail = Object.keys(t || {}).sort().map(k => t[k]); events = Object.keys(e || {}).sort().map(k => e[k]);
+      }
+    } catch (err) { offline = true; }
+    tick++; render();
+  }
+
+  function render() {
+    const loc = rec.loc, trk = rec.tracking || {}, now = Date.now();
+    const age = loc ? Math.round((now - loc.t) / 1000) : null;
+    const ago = s => s < 15 ? 'अभी' : s < 90 ? s + ' सेकंड पहले' : Math.round(s / 60) + ' मिनट पहले';
+    const stale = trk.on && age != null && age > 120;
+    const mode = (loc && loc.mode) || trk.mode || 'unknown';
+    let pill = trk.on ? (stale ? `<span class="pill warn"><i></i>अपडेट रुका</span>` : `<span class="pill on"><i></i>लाइव</span>`) : `<span class="pill off"><i></i>लोकेशन बंद</span>`;
+    let note = '';
+    if (!loc) note = trk.on ? 'लोकेशन आने का इंतज़ार…' : 'अभी लाइव लोकेशन चालू नहीं है।';
+    else if (stale) note = `<b>${ago(age)} से अपडेट नहीं आया।</b> फ़ोन बंद या इंटरनेट बंद हो सकता है। आख़िरी जगह नक्शे पर दिख रही है।`;
+    else if (!trk.on) note = 'लोकेशन बंद है। आख़िरी जानी हुई जगह: ' + ago(age) + '।';
+    else note = 'आख़िरी अपडेट: ' + ago(age) + ' · सटीकता लगभग ' + loc.acc + ' मीटर';
+    const bat = loc && loc.bat != null ? `<span class="pill ${loc.bat < 15 ? 'bad' : ''}">🔋 ${loc.bat}%</span>` : '';
+    $('#stat').innerHTML = `<h2 style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${esc(rec.name)} ${pill}${trk.on ? `<span class="pill">${PC.MODES[mode] || '📍'} ${MODE_HI[mode] || ''}</span>` : ''}${bat}</h2><p class="muted s" style="margin:0">${note}${offline ? ' <b>(आपके फ़ोन में इंटरनेट नहीं)</b>' : ''}</p>`;
+    if (loc) {
+      const marks = events.filter(e => e.lat != null && (e.type === 'stop' || e.type === 'left' || e.type === 'reached' || e.type === 'alert')).map(e => ({ lat: e.lat, lng: e.lng, col: e.type === 'alert' ? '#E3122F' : e.type === 'stop' ? '#E9B949' : '#0F9D58' }));
+      map.set(loc, trail, marks, PC.MODES[mode] || '📍', rec.name);
+      $('#gm').href = PC.mapLink(loc.lat, loc.lng);
+    } else { $('#gm').removeAttribute('href'); }
+    /* timeline */
+    const txt = e => { const pl = PLACE_HI[e.place] || '';
+      switch (e.type) {
+        case 'left': return ['🚪', (pl ? pl + ' से ' : '') + 'निकले'];
+        case 'reached': return ['✅', (pl ? pl + ' ' : '') + 'पहुँच गए'];
+        case 'start': return ['▶️', 'लाइव लोकेशन शुरू'];
+        case 'stop_sharing': return ['⏹️', 'लाइव लोकेशन बंद की'];
+        case 'stop': return ['⏸️', 'एक जगह रुके हैं (3 मिनट से ज़्यादा)'];
+        case 'mode': return [PC.MODES[e.mode] || '📍', 'साधन: ' + (MODE_HI[e.mode] || '')];
+        case 'alert': return ['🚨', 'रेड अलर्ट!'];
+        case 'safe': return ['🙂', 'सुरक्षित बताया'];
+        default: return ['•', e.type]; } };
+    const list = events.slice().reverse().slice(0, 14);
+    $('#tl').innerHTML = list.length ? list.map(e => { const [ic, t] = txt(e); return `<li><span class="ic">${ic}</span><span>${esc(t)}</span><span class="tm">${PC.timeStr(e.t)}</span></li>`; }).join('') : '<li class="muted">अभी कुछ नहीं।</li>';
+    /* alert */
+    const a = rec.alert, live = a && !a.resolved;
+    $('#ban').innerHTML = live ? `<div class="warnbox"><b>रेड अलर्ट चालू है!</b> ${PC.timeStr(a.t)} बजे। <button class="b3 sm" id="showa" style="margin-top:8px">अलर्ट खोलें</button></div>` : (a && a.resolved ? `<div class="banner">पिछला अलर्ट बंद हुआ: सुरक्षित बताया गया।</div>` : '');
+    const sa = $('#showa'); if (sa) sa.onclick = () => showAlert(a);
+    if (live && a.id !== seenAlert) { seenAlert = a.id; showAlert(a); }
+    if (!live && ovl) { PC.siren.stop(); ovl.remove(); ovl = null; }
+  }
+
+  function showAlert(a) {
+    if (ovl) ovl.remove();
+    PC.siren.start();
+    const loc = rec.loc || (a.lat != null ? { lat: a.lat, lng: a.lng } : null);
+    ovl = document.createElement('div'); ovl.className = 'alertbox';
+    ovl.innerHTML = `<div class="in"><h1>रेड अलर्ट!</h1><p class="center" style="margin:0;font-size:18px"><b>${esc(rec.name)}</b> को मदद चाहिए</p>
+      <div class="box">अलर्ट का समय: ${PC.timeStr(a.t)}. ${loc ? 'नीचे दिए बटन से लोकेशन खोलें।' : 'लोकेशन अभी नहीं मिली।'}</div>
+      ${rec.phone ? `<button class="b3 green big" id="ag">${esc(rec.name)} को कॉल करें</button>` : ''}
+      <button class="b3 red big" id="a112" style="margin-top:12px">112 पर कॉल करें</button>
+      ${loc ? `<a class="b3 light big" style="margin-top:12px" href="${PC.mapLink(loc.lat, loc.lng)}" target="_blank" rel="noopener">लोकेशन खोलें</a>` : ''}
+      <div class="grid2 nocopy" style="margin-top:14px">${contacts().map((c, i) => `<div class="person"><div class="nm"><em>${esc(lbl(c).trim()[0] || '?')}</em>${esc(lbl(c))}</div><div class="row"><button class="b3 sm green" data-c="${i}">कॉल</button></div></div>`).join('')}</div>
+      <div class="grid2" style="margin-top:14px"><button class="b3 light" id="ss">सायरन बंद करें</button><button class="b3 light" id="cl">अलर्ट स्क्रीन बंद करें</button></div></div>`;
+    document.body.appendChild(ovl); PC.noCopy(ovl);
+    const g = $('#ag', ovl); if (g) g.onclick = () => PC.call(rec.phone);
+    $('#a112', ovl).onclick = () => PC.call('112');
+    $('#ss', ovl).onclick = () => PC.siren.stop();
+    $('#cl', ovl).onclick = () => { PC.siren.stop(); ovl.remove(); ovl = null; };
+    ovl.addEventListener('click', e => { const b = e.target.closest('[data-c]'); if (b) PC.call(contacts()[b.dataset.c].phone); });
+  }
+};
+
+'use strict';
+/* Admin page (only for the owner): add a person, make the two QR cards, payment ON/OFF, register file */
+PC.views.admin = async function (app) {
+  const CK = 'pc_cfg', RK = 'pc_reg', AK = 'pc_adm';
+  const jget = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+  const cfg = jget(CK, {}); let reg = jget(RK, []);
+  const saveCfg = () => localStorage.setItem(CK, JSON.stringify(cfg)), saveReg = () => localStorage.setItem(RK, JSON.stringify(reg));
+  const defBase = location.origin + location.pathname.replace(/index\.html$/, '');
+  const base = () => (cfg.base || defBase).replace(/\?.*$/, '');
+  const applyHost = () => PC.setHost(cfg.host && PC.hostOk(cfg.host.replace(/^https?:\/\//, '').replace(/\/+$/, '')) ? cfg.host : '');
+  applyHost();
+  const logo = new Image(); const logoReady = new Promise(r => { logo.onload = r; logo.onerror = r; }); logo.src = 'logo.webp';
+  const urlFor = (gid, v) => base() + '?v=' + v + '&id=' + gid + (PC.demo ? '' : '&d=' + PC.host);
+
+  /* ---------- admin PIN ---------- */
+  async function setAdminPin() {
+    let first = null;
+    const a = await PC.pinPad({ title: 'Set admin PIN', sub: '4 digits. Only you should know it.', onSubmit: p => { first = p; return true; } }); if (!a) return false;
+    const b = await PC.pinPad({ title: 'Confirm admin PIN', onSubmit: p => p === first ? true : 'PINs do not match' }); if (!b) return false;
+    const salt = PC.rand(12); localStorage.setItem(AK, JSON.stringify({ salt, h: await PC.hashPin(salt, first) })); return true;
+  }
+  app.innerHTML = `<div class="wrap center"><img class="logo-lg" src="logo.webp" alt=""><h1>${PC.brand} Admin</h1><p class="muted">Owner only</p><button class="b3 big" id="un">Unlock</button></div>`;
+  $('#un').onclick = async () => {
+    const adm = jget(AK, null);
+    if (!adm) { if (await setAdminPin()) panel(); return; }
+    const ok = await PC.pinPad({ title: 'Admin PIN', onSubmit: async p => (await PC.hashPin(adm.salt, p)) === adm.h ? true : 'Wrong PIN' });
+    if (ok) panel();
+  };
+
+  /* ---------- QR cards ---------- */
+  function qrMatrix(text) { const q = new PCQR(-1, 0); q.addData(text); q.make(); return { n: q.getModuleCount(), at: (r, c) => q.isDark(r, c) }; }
+  async function drawCard(cv, o) {
+    await logoReady;
+    const W = 900, H = 1300, x = cv.getContext('2d'); cv.width = W; cv.height = H;
+    x.fillStyle = '#fff'; x.fillRect(0, 0, W, H);
+    const g = x.createLinearGradient(0, 0, W, 0); g.addColorStop(0, '#4B1A86'); g.addColorStop(1, '#FF2E88');
+    x.fillStyle = g; x.fillRect(0, 0, W, 190);
+    x.fillStyle = '#fff'; x.textAlign = 'center'; x.font = '800 62px system-ui,sans-serif'; x.fillText(o.title, W / 2, 98);
+    x.font = '600 30px system-ui,sans-serif'; x.fillText(o.sub, W / 2, 148);
+    const m = qrMatrix(o.url), quiet = 4, cell = Math.floor(640 / (m.n + quiet * 2)), size = cell * (m.n + quiet * 2), ox = Math.round((W - size) / 2), oy = 225;
+    x.fillStyle = '#fff'; x.fillRect(ox, oy, size, size);
+    x.fillStyle = '#1A0B2E';
+    for (let r = 0; r < m.n; r++) for (let c = 0; c < m.n; c++) if (m.at(r, c)) x.fillRect(ox + (c + quiet) * cell, oy + (r + quiet) * cell, cell, cell);
+    x.strokeStyle = '#E6DCF3'; x.lineWidth = 4; x.strokeRect(ox - 2, oy - 2, size + 4, size + 4);
+    let y = oy + size + 58; x.fillStyle = '#25103F'; x.font = '800 44px system-ui,sans-serif'; x.fillText(o.name + '  ·  No. ' + o.num, W / 2, y);
+    x.font = '500 29px system-ui,sans-serif'; x.fillStyle = '#6F6288';
+    o.lines.forEach(l => { y += 42; x.fillText(l, W / 2, y); });
+    if (logo.naturalWidth) { const s = 150; x.drawImage(logo, (W - s) / 2, H - 120 - s - 8, s, s); }
+    const g2 = x.createLinearGradient(0, 0, W, 0); g2.addColorStop(0, '#4B1A86'); g2.addColorStop(1, '#FF2E88'); x.fillStyle = g2; x.fillRect(0, H - 120, W, 120);
+    x.fillStyle = '#fff'; x.textAlign = 'center'; x.font = '800 54px system-ui,sans-serif'; x.fillText(o.label, W / 2, H - 50);
+    return cv;
+  }
+  function cardsFor(r, host) {
+    host.innerHTML = `<div class="qrs"><div><canvas class="cvg"></canvas><div class="grid2" style="margin-top:8px"><button class="b3 sm" data-d="g">Download</button><button class="b3 sm green" data-s="g">Share</button></div></div>
+      <div><canvas class="cvp"></canvas><div class="grid2" style="margin-top:8px"><button class="b3 sm" data-d="p">Download</button><button class="b3 sm green" data-s="p">Share</button></div></div></div>
+      <p class="muted s">Test links: <a href="${urlFor(r.gid, 'g')}" target="_blank" rel="noopener">person page</a> &middot; <a href="${urlFor(r.gid, 'p')}" target="_blank" rel="noopener">family page</a></p>`;
+    drawCard($('.cvg', host), { label: 'GIRLS QR CODE', url: urlFor(r.gid, 'g'), title: 'SCAN FOR SAFETY', sub: 'Emergency contacts · Live location · Red alert', name: r.name, num: r.n, lines: ['Scan to see emergency contacts.', 'Press Get Started and enter PIN to share live location.'] });
+    drawCard($('.cvp', host), { label: 'PARENTS QR CODE', url: urlFor(r.gid, 'p'), title: 'FAMILY LIVE VIEW', sub: 'परिवार के लिए', name: r.name, num: r.n, lines: ['Scan, enter PIN, see live location.', 'स्कैन करें, PIN डालें, लोकेशन देखें'] });
+    host.onclick = e => {
+      const b = e.target.closest('button'); if (!b) return; const k = b.dataset.d || b.dataset.s; if (!k) return;
+      const cv = $(k === 'g' ? '.cvg' : '.cvp', host), fname = 'PoonamCare-' + r.n + '-' + r.name.replace(/\W+/g, '_') + (k === 'g' ? '-PERSON-QR' : '-FAMILY-QR') + '.png';
+      cv.toBlob(async blob => {
+        if (b.dataset.s) { const f = new File([blob], fname, { type: 'image/png' }); try { if (navigator.canShare && navigator.canShare({ files: [f] })) { await navigator.share({ files: [f], title: PC.brand }); return; } } catch (er) { if (er.name === 'AbortError') return; } PC.toast('Sharing not supported here. Downloading instead.'); }
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = fname; document.body.appendChild(a); a.click(); a.remove();
+      }, 'image/png');
+    };
+  }
+
+  /* ---------- parsing pasted details ---------- */
+  const KINDS = [['brother', 'Bhai', /bhai|brother|\bbro\b/i], ['mother', 'Mummy', /mummy|mommy|\bmom\b|mother|\bmaa\b|mama/i], ['father', 'Papa', /papa|father|\bdad\b|pita/i], ['sister', 'Sister', /sister|behen|bahan|didi/i]];
+  function parseDetails(t) {
+    const out = { contacts: [], emails: [] };
+    t.split(/\r?\n/).forEach(line => {
+      const m = line.match(/^\s*([^:：]+?)\s*[:：]\s*(.+?)\s*$/); if (!m) return;
+      const label = m[1].trim(), val = m[2].trim();
+      if (/@/.test(val)) { val.split(/[\s,;]+/).filter(s => /@/.test(s)).forEach(s => out.emails.push(s.toLowerCase())); return; }
+      const d = PC.digits(val); if (d.length < 10) return;
+      const k = KINDS.find(x => x[2].test(label));
+      out.contacts.push(k ? { key: k[0], name: k[1], phone: d.slice(-10), email: '' } : { key: 'other', name: label.replace(/\s+/g, ' ').slice(0, 24), phone: d.slice(-10), email: '' });
+    });
+    out.emails = [...new Set(out.emails)]; return out;
+  }
+
+  /* ---------- panel ---------- */
+  let rows = [];
+  function panel() {
+    app.innerHTML = `<div class="wrap adm">
+      <div class="top"><img class="tl" src="logo.webp" alt=""><div><b>${PC.brand} Admin</b><span>Owner panel</span></div></div>
+      <div id="mode"></div>
+      <details class="card"><summary><b>Settings (do once)</b></summary>
+        <label>Firebase database address</label><input id="fb" placeholder="your-project-default-rtdb.firebaseio.com" value="${esc(cfg.host || '')}">
+        <label>EmailJS Service ID</label><input id="es" value="${esc(cfg.s || '')}"><label>EmailJS Template ID</label><input id="et" value="${esc(cfg.t || '')}"><label>EmailJS Public Key</label><input id="ek" value="${esc(cfg.k || '')}">
+        <label>Website address of these files (used inside QR codes)</label><input id="bs" placeholder="${esc(defBase)}" value="${esc(cfg.base || '')}">
+        <div class="grid2" style="margin-top:12px"><button class="b3" id="sv">Save</button><button class="b3 light" id="tdb">Test database</button></div>
+        <div class="grid2" style="margin-top:10px"><button class="b3 light" id="tem">Test email</button><button class="b3 light" id="chpin">Change admin PIN</button></div></details>
+      <div class="card"><h2>Add a person</h2>
+        <label>Paste details (optional): lines like "Mummy: 98xxxxxxxx" and "Email: a@b.com"</label><textarea id="paste" placeholder="Mummy: 9812345678&#10;Papa: 9812345679&#10;Email: family@gmail.com"></textarea>
+        <button class="b3 light" id="rd" style="margin:8px 0">Read details</button>
+        <label>Person's name</label><input id="nm" autocomplete="off"><label>Person's own phone (optional)</label><input id="ph" inputmode="numeric">
+        <div class="grid2"><div><label>Person's PIN</label><input id="gp" inputmode="numeric" maxlength="4"></div><div><label>Family PIN</label><input id="pp" inputmode="numeric" maxlength="4"></div></div>
+        <label>Contacts (shown with Call buttons)</label><div id="crs"></div><button class="b3 light sm" id="addc" style="margin-top:6px;max-width:200px">+ Add contact</button>
+        <label>Emails that get the Red Alert (one per line)</label><textarea id="em" style="min-height:70px"></textarea>
+        <label class="chk"><input type="checkbox" id="mm"><span>Also email "I have left / I have reached" (uses the free email quota faster)</span></label>
+        <button class="b3 big" id="mk">Create QR codes</button></div>
+      <div id="res"></div>
+      <div class="card"><h2>Register <span class="muted s" id="cnt"></span></h2>
+        <div class="grid2" style="margin-bottom:10px"><button class="b3 light sm" id="rf">Refresh status</button><button class="b3 sm" id="csv">Download register (CSV)</button></div>
+        <div class="tw"><table><thead><tr><th>No.</th><th>Name</th><th>Agreed</th><th>Service</th><th>QR</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+        <div class="grid2" style="margin-top:12px"><button class="b3 light sm" id="bk">Backup (JSON)</button><button class="b3 light sm" id="rs">Restore backup</button></div><input type="file" id="rsf" accept=".json" hidden>
+        <p class="muted s">The register lives in this browser. Take a backup after adding people. Clearing browser data erases it. The CSV has no PINs, so it is safe to give your assistant.</p></div>
+      <p class="foot">${PC.brand} &middot; ${PC.tag}</p></div>`;
+    modeBanner(); $('#gp').value = rpin(); $('#pp').value = rpin(); $('#crs').innerHTML = ''; ['mother', 'father', 'brother', 'sister'].forEach(k => crow({ key: k }));
+    wire(); drawTable(); refresh();
+  }
+  const rpin = () => String(crypto.getRandomValues(new Uint32Array(1))[0] % 10000).padStart(4, '0');
+  function modeBanner() {
+    $('#mode').innerHTML = PC.demo ? `<div class="banner"><b>TEST MODE.</b> No database is connected, so QR codes work only on this browser. Open Settings and add the Firebase address to go live.</div>`
+      : `<div class="banner" style="background:#DDF6E8;color:#0A6B3A">Live database connected. ${cfg.s && cfg.t && cfg.k ? 'Email alerts are set up.' : '<b>Email alerts are NOT set up yet</b> (see Settings).'}</div>`;
+  }
+  function crow(c) {
+    const d = document.createElement('div'); d.className = 'cr';
+    d.innerHTML = `<select>${[['mother', 'Mummy'], ['father', 'Papa'], ['brother', 'Bhai'], ['sister', 'Sister'], ['other', 'Other']].map(o => `<option value="${o[0]}">${o[1]}</option>`).join('')}</select><input class="n" placeholder="Name shown" value="${esc(c.name || '')}"><input class="p" inputmode="numeric" placeholder="Phone" value="${esc(c.phone || '')}"><input class="e" placeholder="Email (optional)" value="${esc(c.email || '')}"><button class="b3 light sm" type="button" style="grid-column:1/-1">Remove</button>`;
+    const sel = $('select', d); sel.value = c.key || 'other';
+    const nm = $('.n', d), dn = { mother: 'Mummy', father: 'Papa', brother: 'Bhai', sister: 'Sister' };
+    if (!c.name && dn[sel.value]) nm.value = dn[sel.value];
+    sel.onchange = () => { if (dn[sel.value]) nm.value = dn[sel.value]; };
+    $('button', d).onclick = () => d.remove(); $('#crs').appendChild(d);
+  }
+  const readRows = () => [...document.querySelectorAll('#crs .cr')].map(d => ({ key: $('select', d).value, name: $('.n', d).value.trim(), phone: PC.digits($('.p', d).value).slice(-10), email: $('.e', d).value.trim().toLowerCase() })).filter(c => c.phone.length >= 8 && c.name);
+
+  function wire() {
+    $('#sv').onclick = () => { cfg.host = $('#fb').value.trim().replace(/^https?:\/\//, '').replace(/\/+$/, ''); cfg.s = $('#es').value.trim(); cfg.t = $('#et').value.trim(); cfg.k = $('#ek').value.trim(); cfg.base = $('#bs').value.trim();
+      if (cfg.host && !PC.hostOk(cfg.host)) { PC.toast('The database address must end with firebaseio.com or firebasedatabase.app'); cfg.host = ''; } saveCfg(); applyHost(); modeBanner(); PC.toast('Saved'); };
+    $('#tdb').onclick = async () => { $('#sv').click(); const k = 'g/ping' + PC.rand(10); try { await PC.db.put(k, { t: Date.now() }); const v = await PC.db.get(k); await PC.db.del(k); PC.toast(v && v.t ? (PC.demo ? 'Test mode works (no real database yet)' : 'Database works') : 'Database did not answer'); } catch (e) { PC.toast('Database error: ' + e.message); } };
+    $('#tem').onclick = async () => { $('#sv').click(); const to = prompt('Send a test email to which address?'); if (!to) return; try { await PC.sendEmail({ s: cfg.s, t: cfg.t, k: cfg.k }, to, 'Test from ' + PC.brand, 'This is a test alert from ' + PC.brand + '.', '', 'Test'); PC.toast('Test email sent'); } catch (e) { PC.toast('Email failed: ' + e.message, 4000); } };
+    $('#chpin').onclick = async () => { localStorage.removeItem(AK); await setAdminPin(); };
+    $('#rd').onclick = () => { const o = parseDetails($('#paste').value); if (!o.contacts.length && !o.emails.length) return PC.toast('Nothing found. Use lines like "Mummy: 9812345678"');
+      $('#crs').innerHTML = ''; o.contacts.forEach(crow); if (o.emails.length) $('#em').value = o.emails.join('\n'); PC.toast('Read ' + o.contacts.length + ' contacts and ' + o.emails.length + ' emails. Check them below.'); };
+    $('#addc').onclick = () => crow({ key: 'other' });
+    $('#mk').onclick = create;
+    $('#rf').onclick = refresh;
+    $('#csv').onclick = () => {
+      const q = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+      const lines = [['No', 'Name', 'Phone', 'Family contacts', 'Alert emails', 'Agreed', 'Service ON', 'Created'].map(q).join(',')].concat(reg.map(r => [r.n, r.name, r.phone, PC.arr(r.contacts).map(c => c.name + ' ' + c.phone).join('; '), PC.arr(r.emails).join('; '), r.consent ? 'Yes' : 'No', r.active ? 'Yes' : 'NO', new Date(r.created).toLocaleDateString()].map(q).join(',')));
+      dl(new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv' }), 'poonam-care-register.csv');
+    };
+    $('#bk').onclick = () => dl(new Blob([JSON.stringify({ cfg, reg }, null, 1)], { type: 'application/json' }), 'poonam-care-backup.json');
+    $('#rs').onclick = () => $('#rsf').click();
+    $('#rsf').onchange = async e => { const f = e.target.files[0]; if (!f) return; try { const j = JSON.parse(await f.text()); if (!Array.isArray(j.reg)) throw 0; if (!confirm('Replace the register in this browser with ' + j.reg.length + ' people from the backup?')) return; reg = j.reg; Object.assign(cfg, j.cfg || {}); saveReg(); saveCfg(); applyHost(); panel(); PC.toast('Backup restored'); } catch (er) { PC.toast('That file is not a valid backup'); } };
+    $('#tb').onclick = async e => {
+      const b = e.target.closest('button'); if (!b) return; const r = reg.find(x => x.gid === b.dataset.g); if (!r) return;
+      if (b.dataset.a === 'pay') {
+        b.disabled = true; try { await PC.db.patch('g/' + r.gid, { active: !r.active }); r.active = !r.active; saveReg(); PC.toast('No. ' + r.n + ' ' + r.name + ': service ' + (r.active ? 'ON' : 'OFF')); } catch (er) { PC.toast('Could not change (no internet?)'); } drawTable();
+      } else if (b.dataset.a === 'qr') {
+        const m = document.createElement('div'); m.className = 'modal'; m.innerHTML = '<div class="sheet"><h3>' + esc(r.name) + ' &middot; No. ' + r.n + '</h3><p class="muted s">Person PIN: <b>' + esc(r.pin) + '</b> &middot; Family PIN: <b>' + esc(r.ppin) + '</b></p><div id="mq"></div><button class="b3 light big" style="margin-top:12px" id="mc">Close</button></div>';
+        document.body.appendChild(m); cardsFor(r, $('#mq', m)); $('#mc', m).onclick = () => m.remove();
+      } else if (b.dataset.a === 'del') {
+        if (!confirm('Delete ' + r.name + '? Their QR codes will stop working.')) return;
+        try { await PC.db.del('g/' + r.gid); await PC.db.del('t/' + r.gid); } catch (er) { return PC.toast('Could not delete (no internet?)'); }
+        reg = reg.filter(x => x.gid !== r.gid); saveReg(); drawTable();
+      }
+    };
+  }
+  function dl(blob, name) { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove(); }
+
+  async function create() {
+    const name = $('#nm').value.trim(), gp = $('#gp').value.trim(), pp = $('#pp').value.trim(), contacts = readRows();
+    if (!name) return PC.toast('Enter the name');
+    if (!/^\d{4}$/.test(gp) || !/^\d{4}$/.test(pp)) return PC.toast('Both PINs must be 4 digits');
+    if (!contacts.length) return PC.toast('Add at least one contact with a phone number');
+    const emails = [...new Set($('#em').value.split(/[\s,;]+/).map(s => s.trim().toLowerCase()).filter(s => /^\S+@\S+\.\S+$/.test(s)))];
+    const n = reg.reduce((m, r) => Math.max(m, r.n), 0) + 1, gid = PC.rand(16), salt = PC.rand(12);
+    const rec = { v: 1, n, name, phone: PC.digits($('#ph').value).slice(-10), contacts, emails, active: true, salt, gh: await PC.hashPin(salt, gp), ph: await PC.hashPin(salt, pp), created: Date.now(), base: base(), marksMail: $('#mm').checked };
+    if (cfg.s && cfg.t && cfg.k) rec.mail = { s: cfg.s, t: cfg.t, k: cfg.k };
+    $('#mk').disabled = true;
+    try { await PC.db.put('g/' + gid, rec); } catch (e) { $('#mk').disabled = false; return PC.toast('Could not save: ' + e.message + '. Check Settings.', 4500); }
+    $('#mk').disabled = false;
+    const r = { gid, n, name, phone: rec.phone, pin: gp, ppin: pp, contacts, emails, created: rec.created, active: true, consent: false };
+    reg.push(r); saveReg(); drawTable();
+    $('#res').innerHTML = `<div class="card"><h2>Done: ${esc(name)} (No. ${n})</h2><div class="warnbox">Tell them the PINs yourself. Do not write them on the QR card.<br><b>Person PIN: ${esc(gp)} &nbsp; Family PIN: ${esc(pp)}</b></div><div id="rq"></div></div>`;
+    cardsFor(r, $('#rq')); $('#res').scrollIntoView({ behavior: 'smooth' });
+    $('#nm').value = ''; $('#ph').value = ''; $('#paste').value = ''; $('#gp').value = rpin(); $('#pp').value = rpin();
+  }
+
+  function drawTable() {
+    $('#cnt').textContent = '(' + reg.length + ')';
+    $('#tb').innerHTML = reg.slice().sort((a, b) => b.n - a.n).map(r => `<tr><td>${r.n}</td><td>${esc(r.name)}</td><td>${r.consent ? 'Yes' : '<span class="muted">No</span>'}</td>
+      <td><button class="b3 sm ${r.active ? 'green' : 'red'}" data-a="pay" data-g="${r.gid}" style="min-width:128px">${r.active ? 'PAID ✔ ON' : 'NOT PAID ✖ OFF'}</button></td>
+      <td><button class="b3 sm light" data-a="qr" data-g="${r.gid}">QR</button></td><td><button class="b3 sm light" data-a="del" data-g="${r.gid}">&#128465;</button></td></tr>`).join('') || '<tr><td colspan="6" class="muted">No one added yet.</td></tr>';
+  }
+  async function refresh() {
+    await Promise.all(reg.map(async r => { try { const v = await PC.db.get('g/' + r.gid); if (v) { r.active = v.active !== false; r.consent = !!v.consent; } } catch (e) { } }));
+    saveReg(); drawTable();
+  }
+};
+
+PC.start();
+</script>
+</body>
+</html>
