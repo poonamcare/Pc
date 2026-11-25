@@ -1,0 +1,230 @@
+
+/* ==========================================
+   POONAM CARE - CUSTOMER SYSTEM
+   Customer Registration & Profile Management
+   ========================================== */
+
+// Firebase modules
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+import {
+  getDatabase,
+  ref,
+  set,
+  get,
+  update
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
+// Firebase must be initialized in firebase-config.js
+// Export auth and database from that file.
+import { auth, database } from "./firebase-config.js";
+
+// ==========================================
+// 1. CUSTOMER REGISTRATION
+// ==========================================
+
+export async function registerCustomer(data) {
+  try {
+    const {
+      name,
+      email,
+      password,
+      phone,
+      emergencyContact
+    } = data;
+
+    if (!name || !email || !password || !phone) {
+      throw new Error("Please fill all required fields.");
+    }
+
+    if (password.length < 8) {
+      throw new Error("Password must be at least 8 characters.");
+    }
+
+    const credential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    const uid = credential.user.uid;
+
+    const customerData = {
+      uid,
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+      phone: phone.trim(),
+      emergencyContact: emergencyContact || "",
+      qrToken: crypto.randomUUID(),
+      accountStatus: "active",
+      createdAt: Date.now()
+    };
+
+    await set(ref(database, `customers/${uid}`), customerData);
+
+    return {
+      success: true,
+      message: "Registration successful!",
+      uid
+    };
+
+  } catch (error) {
+    console.error("Registration Error:", error);
+
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
+
+// ==========================================
+// 2. CUSTOMER LOGIN
+// ==========================================
+
+export async function customerLogin(email, password) {
+  try {
+    const result = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    const uid = result.user.uid;
+
+    const snapshot = await get(
+      ref(database, `customers/${uid}`)
+    );
+
+    if (!snapshot.exists()) {
+      await signOut(auth);
+      throw new Error("Customer profile not found.");
+    }
+
+    const customer = snapshot.val();
+
+    if (customer.accountStatus !== "active") {
+      await signOut(auth);
+      throw new Error("Your account is not active.");
+    }
+
+    return {
+      success: true,
+      customer
+    };
+
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
+
+// ==========================================
+// 3. GET CUSTOMER PROFILE
+// ==========================================
+
+export async function getCustomerProfile(uid) {
+  try {
+    const snapshot = await get(
+      ref(database, `customers/${uid}`)
+    );
+
+    if (!snapshot.exists()) {
+      return null;
+    }
+
+    return snapshot.val();
+
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+// ==========================================
+// 4. UPDATE CUSTOMER PROFILE
+// ==========================================
+
+export async function updateCustomerProfile(uid, data) {
+  try {
+    const allowedFields = [
+      "name",
+      "phone",
+      "emergencyContact"
+    ];
+
+    const updates = {};
+
+    for (const field of allowedFields) {
+      if (data[field] !== undefined) {
+        updates[field] = data[field];
+      }
+    }
+
+    await update(
+      ref(database, `customers/${uid}`),
+      updates
+    );
+
+    return {
+      success: true,
+      message: "Profile updated successfully."
+    };
+
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
+
+// ==========================================
+// 5. GET CUSTOMER QR TOKEN
+// ==========================================
+
+export async function getCustomerQR(uid) {
+  try {
+    const snapshot = await get(
+      ref(database, `customers/${uid}/qrToken`)
+    );
+
+    if (!snapshot.exists()) {
+      throw new Error("QR token not found.");
+    }
+
+    return snapshot.val();
+
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+// ==========================================
+// 6. CUSTOMER LOGOUT
+// ==========================================
+
+export async function customerLogout() {
+  try {
+    await signOut(auth);
+
+    return {
+      success: true,
+      message: "Logged out successfully."
+    };
+
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message
+    };
+  }
+}
